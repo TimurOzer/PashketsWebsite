@@ -52,18 +52,23 @@ body {
 
 .card-container {
     display: flex;
-    overflow: hidden;
     width: 300px;
     margin: 20px auto;
     position: relative;
+    overflow: hidden; /* Kartların konteyner dışına taşmaması için */
 }
 
 .card {
     min-width: 100%;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease; /* Kartlar arasında geçiş yaparken animasyon */
     background-color: #3d3d3d;
     color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: none; /* Başlangıçta kartları gizle */
+}
+
+.card.active {
+    display: block; /* Sadece aktif kartı göster */
 }

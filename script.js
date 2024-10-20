@@ -21,32 +21,38 @@ document.querySelectorAll('.button').forEach(button => {
     });
 });
 
-// İlk yüklemede ana bölüm göster
-showSection('home'); // İlk bölüm olarak Home'u göster
 
 let currentCardIndex = 0;
 const cards = document.querySelectorAll('.card');
 const nextCardButton = document.getElementById('nextCard');
 
+// İlk kartı aktif yap
+cards[currentCardIndex].classList.add('active');
+
 // "İleri" butonuna tıklama işlemi
 nextCardButton.addEventListener('click', () => {
+    // Mevcut kartı soldan sağa kaydır
+    cards[currentCardIndex].style.transform = 'translateX(-100%)'; // Mevcut kartı sola kaydır
+
+    // Geçerli kartı gizle ve bir sonraki kartı göster
     currentCardIndex++;
     
     // Kart sayısını aşmadığımızdan emin ol
     if (currentCardIndex >= cards.length) {
         currentCardIndex = 0; // Sıfırlama
     }
-    
-    // Kartları güncelle
-    updateCardVisibility();
+
+    // Yeni kartı aktif yap ve sağdan sola getir
+    cards.forEach(card => card.classList.remove('active')); // Önceki kartların aktif sınıfını kaldır
+    cards[currentCardIndex].classList.add('active'); // Yeni kartı aktif yap
+    cards[currentCardIndex].style.transform = 'translateX(100%)'; // Yeni kartı sağdan getir
+    setTimeout(() => {
+        cards[currentCardIndex].style.transform = 'translateX(0)'; // Yeni kartı yerine kaydır
+    }, 50); // Kısa bir süre sonra kartı tam merkeze kaydır
 });
 
-// Kart görünürlüğünü güncelleyen fonksiyon
-function updateCardVisibility() {
-    cards.forEach((card, index) => {
-        card.style.display = index === currentCardIndex ? 'block' : 'none'; // Sadece aktif kartı göster
-    });
-}
+
+
 
 // İlk yüklemede ana bölüm göster
 showSection('home'); // İlk bölüm olarak Home'u göster
