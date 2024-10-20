@@ -1,42 +1,30 @@
-// Tokenomics slider functionality
-const slider = document.querySelector('.tokenomics-slider');
-const slides = Array.from(slider.children);
-const prevButton = document.getElementById('prevBtn');
-const nextButton = document.getElementById('nextBtn');
+// Tokenomics Slider
+const cards = document.querySelectorAll('.tokenomics-card');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentCard = 0;
 
-let currentIndex = 0;
-
-function updateSliderPosition() {
-    // Slider pozisyonunu güncelle
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+function showCard(index) {
+    cards.forEach((card, i) => {
+        if (i === index) {
+            card.style.display = 'block';  // Kartı göster
+        } else {
+            card.style.display = 'none';   // Diğer kartları gizle
+        }
+    });
 }
 
-prevButton.addEventListener('click', () => {
-    // Eğer geçerli indeks 0'dan büyükse bir azalt
-    if (currentIndex > 0) {
-        currentIndex--;
-    } else {
-        // En son slidere git
-        currentIndex = slides.length - 1;
-    }
-    updateSliderPosition();
+// Başlangıçta ilk kartı göster
+showCard(currentCard);
+
+// İleri butonuna basıldığında
+nextBtn.addEventListener('click', () => {
+    currentCard = (currentCard + 1) % cards.length;  // Sonraki karta geç
+    showCard(currentCard);
 });
 
-nextButton.addEventListener('click', () => {
-    // Eğer geçerli indeks son slideden küçükse bir artır
-    if (currentIndex < slides.length - 1) {
-        currentIndex++;
-    } else {
-        // İlk slide'a dön
-        currentIndex = 0;
-    }
-    updateSliderPosition();
-});
-
-// Responsive Nav Menu Toggle
-const navLinks = document.querySelector('.nav-links');
-const toggleButton = document.querySelector('.nav-toggle');
-
-toggleButton.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+// Geri butonuna basıldığında
+prevBtn.addEventListener('click', () => {
+    currentCard = (currentCard - 1 + cards.length) % cards.length;  // Önceki karta dön
+    showCard(currentCard);
 });
