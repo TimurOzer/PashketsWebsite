@@ -1,14 +1,13 @@
 // Tüm bölümleri gösteren fonksiyon
 function showSection(sectionId) {
-    // Tüm bölümlerin opaklığını sıfırla
     document.querySelectorAll('.section').forEach(section => {
-        section.style.opacity = '0'; // Saydam yap
+        section.classList.remove('active'); // Tüm bölümleri gizle
     });
     
-    // Hedef bölümü göster
     const targetSection = document.getElementById(sectionId);
-    targetSection.style.opacity = '1'; // Hedef bölümün opaklığını artır
+    targetSection.classList.add('active'); // Hedef bölümü göster
 }
+
 
 // Butonlara tıklama olaylarını ekle
 document.querySelectorAll('.button').forEach(button => {
