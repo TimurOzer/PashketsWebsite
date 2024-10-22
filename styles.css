@@ -1,3 +1,26 @@
+/* Parallax bölümler */
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Tam ekran yüksekliği */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Metinleri daha okunabilir yapmak için gölge */
+}
+
+.section {
+    display: none; /* Tüm bölümleri başlangıçta gizle */
+    padding: 50px;
+    color: white;
+    text-align: center;
+    opacity: 1;
+    transform: translateY(50px);
+    transition: all 0.6s ease-in-out;
+}
+
 body {
     margin: 0;
     height: 100vh;
@@ -98,16 +121,6 @@ p {
     transform: scale(1.05);
 }
 
-.section {
-    display: none; /* Tüm bölümleri başlangıçta gizle */
-    padding: 50px;
-    color: white;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease-in-out;
-}
-
 .section.active {
     display: block; /* Sadece aktif bölümü göster */
     opacity: 1; /* Aktif bölümün saydamlığını tam göster */
@@ -176,17 +189,4 @@ p {
 .card-container {
     position: relative;
     overflow: hidden;
-}
-
-/* Parallax bölümler */
-.parallax {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Tam ekran yüksekliği */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Metinleri daha okunabilir yapmak için gölge */
 }
