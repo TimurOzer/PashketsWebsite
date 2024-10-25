@@ -31,6 +31,9 @@ body {
     background-color: #1f1f1f; /* Daha koyu bir ana arka plan */
     color: #f0f0f0; /* Metinlerde daha açık bir gri */
     font-family: 'Kanit', sans-serif; /* Kanit fontunu ekledik */
+    background: linear-gradient(90deg, #3d3d3d, #ff6a00, #3d3d3d);
+    background-size: 400% 400%;
+    animation: gradientAnimation 60s ease infinite; /* Arka planda hareketli renk değişimi */
 }
 
 /* Hero section styling */
@@ -220,4 +223,14 @@ p {
     width: 80%;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     transition: background 0.5s ease;
+}
+
+html {
+    scroll-behavior: smooth; /* Akıcı kaydırma özelliği */
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }

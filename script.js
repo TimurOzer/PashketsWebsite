@@ -75,17 +75,14 @@ document.addEventListener('DOMContentLoaded', () => {
     revealSectionsOnScroll(); // Sayfa yüklenince görünürlüğü kontrol et
 });
 
-// Butonlara smooth scroll ekleyelim
 document.querySelectorAll('.button').forEach(button => {
     button.addEventListener('click', function(event) {
-        event.preventDefault(); // Varsayılan link davranışını önleyelim
-        const sectionId = this.getAttribute('href');
-        
-        document.querySelector(sectionId).scrollIntoView({
-            behavior: 'smooth' // Yumuşak kaydırma
-        });
+        event.preventDefault();
+        const sectionId = this.getAttribute('href').substring(1);
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' }); // Akıcı kaydırma ekleme
     });
 });
+
 
 // İlk yüklemede ana bölüm göster
 showSection('home'); // İlk bölüm olarak Home'u göster
