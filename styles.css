@@ -152,10 +152,13 @@ p {
 .card {
     background-color: #2b2b2b; /* Koyu arka plan */
     color: white;
+    min-width: 200px; /* Minimum genişlik */
+    width: 300px; /* Genişliği artırdık */
+    height: 200px; /* Yükseklik ekledik */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
     display: none; /* Başlangıçta kartları gizle */
     background-image: url('path/to/image.jpg'); /* Kartlarda arka plan resmi */
     background-size: cover;
