@@ -116,9 +116,11 @@ p {
 }
 
 .button:hover {
-    background-color: #f0f0f0;
-    color: #ff6a00;
-    transform: scale(1.05);
+    background-color: white;
+    color: #3d3d3d;
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7); /* Parlama efekti */
+    transform: scale(1.1); /* Butonları biraz büyüt */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;c
 }
 
 .section.active {
@@ -153,16 +155,24 @@ p {
     background-color: #2b2b2b; /* Koyu arka plan */
     color: white;
     min-width: 200px; /* Minimum genişlik */
-    width: 300px; /* Genişliği artırdık */
-    height: 200px; /* Yükseklik ekledik */
-    padding: 20px;
+    width: 450px; /* Genişliği artırdık */
+    height: 250px; /* Yüksekliği artırdık */
+    padding: 40px; /* İç boşluk artırıldı */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Gölgeleri belirginleştir */
+    /*transition: transform 0.5s, box-shadow 0.5s;*/
     display: none; /* Başlangıçta kartları gizle */
     background-image: url('path/to/image.jpg'); /* Kartlarda arka plan resmi */
     background-size: cover;
     background-position: center;
+    font-size: 1.2em; /* Yazı boyutunu artırdık */
+    line-height: 1.5; /* Satır yüksekliğini artırdık */
+    text-align: center; /* Metni ortaladık */
+    font-family: 'Kanit', sans-serif; /* Daha akıcı bir yazı fontu */
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .card.active {
@@ -170,12 +180,19 @@ p {
     display: block; /* Sadece aktif kartı göster */
     opacity: 1;
     transform: scale(1);
+
+    transform: translateY(0); /* Yukarıdan kayarak gelsin */
 }
 
 /* Hover animasyonu */
 .card:hover {
     transform: scale(1.05); /* Kartı büyütme */
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Daha büyük gölge */
+}
+
+.card.active:hover {
+    transform: scale(1.05); /* Üzerine gelince kartı biraz büyüt */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Gölgeleri daha da artır */
 }
 
 /* Kart başlıkları ve metinlerin kontrastı için */
@@ -192,4 +209,15 @@ p {
 .card-container {
     position: relative;
     overflow: hidden;
+}
+
+/* Bölümlere arka plan renk geçişleri */
+#home, #buy, #tokenomics, #contact {
+    background: linear-gradient(120deg, rgba(255, 106, 0, 0.8), rgba(61, 61, 61, 0.8));
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 80%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease;
 }
