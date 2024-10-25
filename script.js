@@ -1,26 +1,48 @@
-// Tüm bölümleri gösteren fonksiyon
-function showSection(sectionId) {
-    document.querySelectorAll('.section').forEach(section => {
-        section.classList.remove('active'); // Tüm bölümleri gizle
+// Belirli bir bölümün görünümünü değiştirirken animasyonu sağlamak için
+const sections = document.querySelectorAll('.section');
+let currentSectionIndex = 0;
+
+function showSection(index) {
+    // Tüm bölümleri gizle
+    sections.forEach((section, i) => {
+        section.classList.remove('active', 'visible'); // "active" ve "visible" sınıflarını kaldır
+        if (i === index) {
+            section.style.display = 'block'; // Aktif bölümü göster
+            setTimeout(() => {
+                section.classList.add('visible'); // Geçişi başlat
+            }, 10); // Kısa bir gecikme ile görünür yap
+        } else {
+            section.style.display = 'none'; // Diğerlerini gizle
+        }
     });
     
-    const targetSection = document.getElementById(sectionId);
-    targetSection.classList.add('active'); // Hedef bölümü göster
+    // İlk bölüm için animasyonu hemen başlat
+    if (index === 0) {
+        sections[index].classList.add('visible');
+    }
 }
 
+// İlk yüklemede ana bölüm göster
+showSection(currentSectionIndex); // İlk bölüm olarak home'u göster
 
-// Butonlara tıklama olaylarını ekle
+// Butonları dinle ve tıklandığında ilgili bölümü göster
 document.querySelectorAll('.button').forEach(button => {
     button.addEventListener('click', function(event) {
         event.preventDefault(); // Varsayılan bağlantı davranışını önler
         
         const sectionId = this.getAttribute('href').substring(1); // href'den bölüm ID'sini al
-        
-        showSection(sectionId); // İlgili bölümü göster
+        const sectionIndex = Array.from(sections).findIndex(section => section.id === sectionId); // ID'ye göre index bul
+        showSection(sectionIndex); // İlgili bölümü göster
     });
 });
 
+// İlk yüklemede ana bölüm göster
+document.addEventListener('DOMContentLoaded', () => {
+    showSection(currentSectionIndex); // İlk bölüm olarak Home'u göster
+    revealSectionsOnScroll(); // Sayfa yüklenince görünürlüğü kontrol et
+});
 
+// Kart gösterme işlemleri
 let currentCardIndex = 0;
 const cards = document.querySelectorAll('.card');
 const nextCardButton = document.getElementById('nextCard');
@@ -69,20 +91,3 @@ function revealSectionsOnScroll() {
 
 // Scroll olayını dinleyelim
 window.addEventListener('scroll', revealSectionsOnScroll);
-
-// İlk başta home kısmı zaten görünür olacak
-document.addEventListener('DOMContentLoaded', () => {
-    revealSectionsOnScroll(); // Sayfa yüklenince görünürlüğü kontrol et
-});
-
-document.querySelectorAll('.button').forEach(button => {
-    button.addEventListener('click', function(event) {
-        event.preventDefault();
-        const sectionId = this.getAttribute('href').substring(1);
-        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' }); // Akıcı kaydırma ekleme
-    });
-});
-
-
-// İlk yüklemede ana bölüm göster
-showSection('home'); // İlk bölüm olarak Home'u göster

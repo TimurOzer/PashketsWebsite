@@ -16,9 +16,20 @@
     padding: 50px;
     color: white;
     text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Opaklık ve konum geçişi */
+}
+
+.section.active {
+    display: block; /* Sadece aktif bölümü göster */
+    opacity: 1; /* Aktif bölümün saydamlığını tam göster */
+    transform: translateY(0); /* Yukarı kaydır */
+}
+
+.section.visible {
     opacity: 1;
-    transform: translateY(50px);
-    transition: all 0.6s ease-in-out;
+    transform: translateY(0);
 }
 
 body {
@@ -33,7 +44,7 @@ body {
     font-family: 'Kanit', sans-serif; /* Kanit fontunu ekledik */
     background: linear-gradient(90deg, #3d3d3d, #ff6a00, #3d3d3d);
     background-size: 400% 400%;
-    animation: gradientAnimation 60s ease infinite; /* Arka planda hareketli renk değişimi */
+    animation: gradientAnimation 45s ease infinite; /* Arka planda hareketli renk değişimi */
 }
 
 /* Hero section styling */
@@ -124,16 +135,6 @@ p {
     box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7); /* Parlama efekti */
     transform: scale(1.1); /* Butonları biraz büyüt */
     transition: transform 0.3s ease, box-shadow 0.3s ease;c
-}
-
-.section.active {
-    display: block; /* Sadece aktif bölümü göster */
-    opacity: 1; /* Aktif bölümün saydamlığını tam göster */
-}
-
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 @media (max-width: 768px) {
