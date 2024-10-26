@@ -1,16 +1,3 @@
-/* Parallax bölümler */
-.parallax {
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    height: 100vh; /* Tam ekran yüksekliği */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Metinleri daha okunabilir yapmak için gölge */
-}
-
 .section {
     display: none; /* Tüm bölümleri başlangıçta gizle */
     padding: 50px;
@@ -47,18 +34,6 @@ body {
     animation: gradientAnimation 45s ease infinite; /* Arka planda hareketli renk değişimi */
 }
 
-/* Hero section styling */
-.hero-section {
-    background: linear-gradient(to right, rgba(61, 61, 61, 0.8), rgba(255, 106, 0, 0.8)), url('https://raw.githubusercontent.com/TimurOzer/PashketsWebsite/refs/heads/main/WhatsApp%20Image%202024-10-14%20at%2022.36.59.jpeg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
 
 h1, h2, h3 {
     color: #ff6a00; /* Başlıklarda parlak turuncu */
@@ -66,41 +41,6 @@ h1, h2, h3 {
 
 p {
     color: #d9d9d9; /* Paragraflarda daha yumuşak bir gri */
-}
-
-.hero-content {
-    max-width: 600px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Hafif siyah bir arka plan kutusu */
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.hero-content h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    font-family: 'Kanit', sans-serif;
-}
-
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.hero-button {
-    background-color: #ff6a00;
-    color: #1f1f1f;
-    padding: 15px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.hero-button:hover {
-    background-color: #f0f0f0;
-    color: #ff6a00;
-    transform: scale(1.1);
 }
 
 .container {
