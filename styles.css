@@ -155,18 +155,6 @@ p {
     overflow: hidden;
 }
 
-/* Bölümlere arka plan renk geçişleri */
-#home, #buy, #tokenomics, #contact {
-    background: linear-gradient(120deg, rgba(255, 106, 0, 0.8), rgba(61, 61, 61, 0.8));
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px 0;
-    width: 80%;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    transition: background 0.5s ease;
-}
-
-
 html {
     scroll-behavior: smooth; /* Akıcı kaydırma özelliği */
 }
