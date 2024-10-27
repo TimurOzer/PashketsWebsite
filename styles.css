@@ -173,7 +173,3 @@ html {
 .normal-text {
     font-size: 18px; /* Normal metin boyutu */
 }
-
-canvas {
-    color: #ffffff; /* Tüm canvas üzerindeki metinler beyaz olacak şekilde ayarlanabilir. */
-}
