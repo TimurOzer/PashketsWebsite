@@ -29,7 +29,7 @@ body {
     background-color: #1f1f1f; /* Daha koyu bir ana arka plan */
     color: #f0f0f0; /* Metinlerde daha açık bir gri */
     font-family: 'Kanit', sans-serif; /* Kanit fontunu ekledik */
-    background: linear-gradient(90deg, #3d3d3d, #ff6a00, #3d3d3d);
+    background: linear-gradient(90deg, #aba9aa, #625c59, #2a2018);
     background-size: 400% 400%;
     animation: gradientAnimation 45s ease infinite; /* Arka planda hareketli renk değişimi */
 }
@@ -37,6 +37,7 @@ body {
 
 h1, h2, h3 {
     color: #ff6a00; /* Başlıklarda parlak turuncu */
+    -webkit-text-stroke: 1.5px #000000; /* Dış çizgi kalınlığı ve rengi */
 }
 
 p {
@@ -163,4 +164,16 @@ html {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
+}
+
+.large-text {
+    font-size: 36px; /* Sadece bu sınıfa sahip metinleri büyüt */
+}
+
+.normal-text {
+    font-size: 18px; /* Normal metin boyutu */
+}
+
+canvas {
+    color: #ffffff; /* Tüm canvas üzerindeki metinler beyaz olacak şekilde ayarlanabilir. */
 }
