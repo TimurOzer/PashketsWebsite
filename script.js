@@ -28,13 +28,20 @@ showSection(currentSectionIndex); // İlk bölüm olarak home'u göster
 // Butonları dinle ve tıklandığında ilgili bölümü göster
 document.querySelectorAll('.button').forEach(button => {
     button.addEventListener('click', function(event) {
-        event.preventDefault(); // Varsayılan bağlantı davranışını önler
-        
         const sectionId = this.getAttribute('href').substring(1); // href'den bölüm ID'sini al
         const sectionIndex = Array.from(sections).findIndex(section => section.id === sectionId); // ID'ye göre index bul
-        showSection(sectionIndex); // İlgili bölümü göster
+        
+        // Eğer 'View Online' butonuna tıklanıyorsa, yönlendirme yap
+        if (this.textContent.includes('View Online')) {
+            // Yönlendirme yap
+            window.location.href = 'whitepaper.html'; // Doğru yolu belirtin
+        } else {
+            event.preventDefault(); // Varsayılan bağlantı davranışını önler
+            showSection(sectionIndex); // İlgili bölümü göster
+        }
     });
 });
+
 
 // İlk yüklemede ana bölüm göster
 document.addEventListener('DOMContentLoaded', () => {
