@@ -33,15 +33,17 @@ document.querySelectorAll('.button').forEach(button => {
         
         // Eğer 'View Online' butonuna tıklanıyorsa, yönlendirme yap
         if (this.textContent.includes('View Online')) {
-            // Yönlendirme yap
+            event.preventDefault(); // Varsayılan bağlantı davranışını önler
             window.location.href = 'whitepaper.html'; // Doğru yolu belirtin
         } else {
-            event.preventDefault(); // Varsayılan bağlantı davranışını önler
-            showSection(sectionIndex); // İlgili bölümü göster
+            // Seçili bölümü göster
+            if (sectionIndex !== -1) {
+                currentSectionIndex = sectionIndex; // Seçili bölüm indeksini güncelle
+                showSection(currentSectionIndex); // İlgili bölümü göster
+            }
         }
     });
 });
-
 
 // İlk yüklemede ana bölüm göster
 document.addEventListener('DOMContentLoaded', () => {
