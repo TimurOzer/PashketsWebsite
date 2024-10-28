@@ -29,7 +29,7 @@ body {
     background-color: #6F4E37; /* Daha koyu bir ana arka plan */
     color: #FED8B1; /* Metinlerde daha açık bir gri */
     font-family: 'Kanit', sans-serif; /* Kanit fontunu ekledik */
-    background: linear-gradient(90deg, #6F4E37, #A67B5B, #ECB176);
+    background: linear-gradient(90deg, #6F4E37, #8B6549, #A67B5B);
     background-size: 400% 400%;
     animation: gradientAnimation 45s ease infinite; /* Arka planda hareketli renk değişimi */
 }

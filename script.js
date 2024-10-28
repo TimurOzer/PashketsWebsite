@@ -105,7 +105,7 @@ window.addEventListener('scroll', revealSectionsOnScroll);
 const targetTokens = 150000000;
 const targetAmount = 10000;
 const currentTokens = 150000000; // Güncel pre-order token miktarı (örnek değer)
-const currentAmount = 0; // Toplanan miktar (örnek değer)
+const currentAmount = 1000; // Toplanan miktar (örnek değer)
 
 // Grafik fonksiyonu
 function renderPreOrderChart() {
@@ -120,8 +120,8 @@ function renderPreOrderChart() {
                     (currentTokens / targetTokens) * 100, // Token yüzdesi
                     (currentAmount / targetAmount) * 100 // Para yüzdesi
                 ],
-                backgroundColor: ['#ff6a00', '#00bfff'],
-                borderColor: ['#ff6a00', '#00bfff'],
+                backgroundColor: ['#FED8B1', '#FED8B1'],
+                borderColor: ['#000000', '#000000'],
                 borderWidth: 1
             }]
         },
@@ -130,7 +130,15 @@ function renderPreOrderChart() {
             scales: {
                 x: {
                     beginAtZero: true,
-                    max: 100 // Maksimum %100 olacak
+                    max: 100, // Maksimum %100 olacak
+                    ticks: {
+                        color: '#FED8B1' // X ekseni metin rengi
+                    }
+                },
+                y: {
+                    ticks: {
+                        color: '#FED8B1' // Y ekseni metin rengi
+                    }
                 }
             },
             plugins: {

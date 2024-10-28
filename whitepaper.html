@@ -1,127 +1,90 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whitepaper</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-         #myPDF {
-            width: %100;
-            height: %100;
-        }
-    
-        /* Butonların stili */
-        .button-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px; /* Butonların altında boşluk bırak */
-        }
-        .button {
-            margin: 0 10px; /* Butonlar arasında boşluk */
-            padding: 10px 20px; /* Butonun içindeki yazıya alan bırak */
-            text-decoration: none; /* Altı çizgiyi kaldır */
-            color: white; /* Yazı rengi beyaz */
-            background-color: #007bff; /* Buton arka plan rengi */
-            border: none; /* Kenar çizgisini kaldır */
-            border-radius: 5px; /* Kenarları yuvarlat */
-            transition: background-color 0.3s; /* Geçiş efekti */
-        }
-        .button:hover {
-            background-color: #0056b3; /* Hover durumunda arka plan rengi değişimi */
-        }
-        /* Yazı alanı stili */
-        .content-area {
-            max-width: 800px; /* Maksimum genişlik ayarlandı */
-            height: auto; /* Yükseklik otomatik ayarlandı */
-            margin: 0 auto; /* Ortalanmış görünüm için otomatik yan boşluk */
-            border: 2px solid #ccc; /* Alan kenar çizgisi */
-            border-radius: 5px; /* Kenarları yuvarlat */
-            padding: 20px; /* İçerik alanı için padding */
-            background-color: #f9f9f9; /* Arka plan rengi */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
-            overflow-y: auto; /* Taşmaları önlemek için dikey kaydırma çubuğu ekle */
-            max-height: 600px; /* Maksimum yükseklik belirlendi */
-        }
-        .content-area p {
-            text-align: left; /* Yazı sol hizalı */
-            color: #555; /* Yazı rengi */
-            font-size: 16px; /* Yazı boyutu */
-            line-height: 1.5; /* Satır yüksekliği ayarlandı */
-            margin: 0; /* Paragraf boşlukları kaldırıldı */
-        }
-    </style>
+    <link rel="stylesheet" href="whitepaper.css"> <!-- Yeni stil dosyası -->
 </head>
 <body>
     <div class="container">
         <h1 class="large-text">Whitepaper</h1>
-       
         
         <div class="button-container">
-           
-            <a href="https://github.com/TimurOzer/PashketsWebsite/raw/main/PashaToken.pdf" class="button" download>Download PDF</a>
-            <a href="index.html" class="button">Geri Dön</a>
+            <a href="https://github.com/TimurOzer/PashketsWebsite/raw/main/PashaToken.pdf" class="button">Download PDF</a>
+            <a href="index.html" class="button">Go Back</a>
         </div>
         
-        <div class="content-area">
-            <iframe id="myPDF" src="https://github.com/TimurOzer/PashketsWebsite/raw/main/PashaToken.pdf" frameborder="0"></iframe>
-            <p>Sunum Başlıkları</p>
+        <div class="content-area">    
+            <h2>Presentation Titles</h2>
             <ul>
-                <li>Giriş ve Konsept</li>
-                <li>Piyasa Analizi</li>
-                <li>Token Ekonomisi</li>
-                <li>Teknolojik Altyapı</li>
-                <li>Topluluk ve Pazarlama Stratejisi</li>
-                <li>Geliştirme Takvimi (RoadMap)</li>
-                <li>Rakip Analizi</li>
-                <li>Riskler ve Zorluklar</li>
-                <li>Sonuç ve Çağrı</li>
+                <li>Introduction and Concept</li>
+                <li>Market Analysis</li>
+                <li>Token Economy</li>
+                <li>Technological Infrastructure</li>
+                <li>Community and Marketing Strategy</li>
+                <li>Development Timeline (RoadMap)</li>
+                <li>Competitor Analysis</li>
+                <li>Risks and Challenges</li>
+                <li>Conclusion and Call to Action</li>
             </ul>
-            <p>Giriş ve Konsept</p>
-            <p>Pasha Token'in adındaki 'Pasha' ismi, kedimden ilham alınarak seçilmiştir.</p>
-            <p>Pasha Token'in amacı, kedilerimizi sevdiğimiz bir kültüre dönüştürmektir. Her bir kedimiz, bizim kendi 'Pasha'mızdır.</p>
-            <p>Pasha Token, toplulukla birlikte yeni bir 'Pasha' kültürü üretip geliştirmeyi hedefler. Amacımız, mümkün olduğunca 'Pashket' olmaya çalışmaktır. (Pashket, topluluğumuzda saygın bir rol anlamına gelir ve sadece belirli sayıda token sahibi olanların kullanabileceği bir unvandır. Topluluğun öncüleridir.)</p>
-            <p>Piyasa Analizi</p>
-            <p>CoinGecko verilerine göre Solana memecoinlerinin piyasa değeri bugün itibarıyla 9,79 milyar dolar. Genel olarak Solana memecoin'leri 1 milyon doların üzerinde piyasa değerine sahip. En değerlisi olan WIF, 2 milyar dolarlık bir değere sahip. Bizim token arzımız 1 milyar olduğundan, hedefimiz piyasa değerini 1 milyar dolara çıkarmaktır. Bu sayede 1 Pasha Token = 1$ olacaktır.</p>
-            <p>Token Ekonomisi-1</p>
-            <p>Token Hacmi: 1.000.000.000 (Bir Milyar) Pasha Token<br>
-            Token Adresi: PASHA********* ile başlayacak<br>
-            Token Dağılımı:</p>
-            <ul>
-                <li>%40 Halka açık alım-satım (400.000.000 Pasha Token)</li>
-                <li>%15 Ödüllendirme Havuzu (150.000.000 Pasha Token)</li>
-                <li>%30 Geliştirici Ekip (300.000.000 Pasha Token)</li>
-                <li>%15 Pre-Order (Erken alım) yatırımcılar için (150.000.000 Pasha Token)</li>
-            </ul>
-            <p>Pasha Token’in yakımı veya basımı olmayacaktır. 150.000.000 Pasha Token, Twitter ve Reddit platformlarında haftalık en çok beğeni alan 5 kişiye (Twitter + Reddit toplamda 10 kişi) kişi başına 100.000 Pasha Token olarak verilecektir. Bu etkinlik 50 hafta boyunca devam edecektir.</p>
-            <p>Kalan 100 milyonluk Pasha Token ödül havuzunun:</p>
-            <ul>
-                <li>25 milyonu, haftalık Pashket resim yarışmalarında kazanan kişilere 250.000 Pasha Token olarak dağıtılacaktır. Bu yarışma 100 hafta boyunca devam edecektir.</li>
-                <li>75 milyonu ise gelecek yıl yeni yarışmalar ve projeler için ayrılacaktır.</li>
-            </ul>
-            <p>Not: Bu ödüllerden sadece bir kez yararlanabilirsiniz. Diğer arkadaşlarımıza da fırsat vermeliyiz.</p>
-            <p>Token Ekonomisi-2</p>
-            <p>Pasha Token Pre-Order 150.000.000 Pasha Token'in 1.500.000 adedi için 100$ değerinde Solana hedeflemekteyiz. Eğer Pre-Order satışları başarıyla tamamlanırsa, 10.000$ değerinde Solana likidite havuzu oluşturabileceğiz. İlk halka açık alım-satım havuzu için 100.000.000 Pasha Token kullanılacaktır. Raydium botuna göre bu likidite havuzu sonrasında Pasha’nın ilk çıkış değeri 100.000.000 Pasha Token = 10.000$ olacağından, Pasha Token’in başlangıç değeri 0,0001$ olacaktır. Pre-Order’dan alan ilk kişiler, doğrudan 150$ değerinde bir varlığa sahip olacaklardır.</p>
-            <p>Pasha Token pre-order tamamlandığında, %10'luk bir kısmı Raydium markette halka açık olarak listelenecektir. Pre-Order’dan gelen tüm Solana'lar likidite havuzu için kullanılacaktır.</p>
-            <p>Pasha Token Havuzu Bu yıl yalnızca 100.000.000 Pasha Token likidite havuzuna ayrılacaktır. 2026'ya girdiğimizde havuza 100.000.000 daha ekleme yapılacaktır. Aynı şekilde, 2027'de 100.000.000, 2028'de ise son olarak 100.000.000 Pasha Token daha eklenerek likidite artırılacaktır.</p>
-            <p>Teknolojik Altyapı</p>
-            <p>Solana ağı üzerinde oluşturulan bir memecoin projesi olan Pasha Token, yönetimi elinizde bulundurduğunuz Pasha Token miktarına göre şekillenir. Eğer Pasha Token arzının %5'ine veya daha fazlasına sahipseniz, siz de bir "Pashket" olursunuz.</p>
-            <p>Pashketler için 6 ayda bir özel bir etkinlik düzenlenecektir.</p>
-            <p>Topluluk ve Pazarlama Stratejisi</p>
-            <p>Pasha Token topluluğunu oluşturmak ve büyütmek için etkili bir pazarlama stratejisi geliştirilecektir. Sosyal medya, forumlar ve etkinliklerle topluluğumuzu bilgilendireceğiz.</p>
-            <p>Geliştirme Takvimi (RoadMap)</p>
-            <ul>
-                <li>1. Aşama: Pasha Token’in ilk satışları ve tanıtım süreci (2024 - Q1)</li>
-                <li>2. Aşama: Topluluk etkinlikleri ve yarışmalar (2024 - Q2)</li>
-                <li>3. Aşama: Pasha Token’in ilk listeleme süreci (2024 - Q3)</li>
-                <li>4. Aşama: Pashketler için özel etkinlik (2024 - Q4)</li>
-            </ul>
-            <p>Rakip Analizi</p>
-            <p>Benzer memecoin projeleri ile karşılaştırıldığında Pasha Token, yenilikçi bir yaklaşım sunmaktadır. Topluluğun katılımını ön planda tutarak farklılaşmayı hedefliyoruz.</p>
-            <p>Riskler ve Zorluklar</p>
-            <p>Pasha Token projesinin başarısı, piyasa koşullarına ve topluluk desteğine bağlıdır. Ancak, bu zorlukları aşmak için güçlü bir ekip ve stratejiye sahibiz.</p>
-            <p>Sonuç ve Çağrı</p>
-            <p>Pasha Token ile kedilere olan sevgimizi ve tutkumuzu bir araya getiriyoruz. Topluluğumuzun bir parçası olmak için herkesi Pasha Token’a katılmaya davet ediyoruz.</p>
+            <div class="text-content">
+                <h3>Introduction and Concept</h3>
+                <p>The name 'Pasha' in Pasha Token is inspired by my cat.</p>
+                <p>The purpose of Pasha Token is to turn our love for cats into a culture. Each of our cats is our own 'Pasha'.</p>
+                <p>Pasha Token aims to create and develop a new 'Pasha' culture together with the community. Our goal is to strive to be as much 'Pashket' as possible. (Pashket means having a respectable role in our community and is a title that can only be used by those who own a specific number of tokens. They are the pioneers of the community.)</p>
+                
+                <h3>Market Analysis</h3>
+                <p>According to CoinGecko data, the market value of Solana memecoins is currently $9.79 billion. Overall, Solana memecoins have a market value of over $1 million. The most valuable one, WIF, has a value of $2 billion. Since our token supply is 1 billion, our goal is to reach a market value of $1 billion. This would mean 1 Pasha Token = $1.</p>
+                
+                <h3>Token Economy-1</h3>
+                <p>Token Volume: 1,000,000,000 (One Billion) Pasha Tokens<br>
+                Token Address: Begins with PASHA*********<br>
+                Token Distribution:</p>
+                <ul>
+                    <li>40% Public Trading (400,000,000 Pasha Tokens)</li>
+                    <li>15% Reward Pool (150,000,000 Pasha Tokens)</li>
+                    <li>30% Development Team (300,000,000 Pasha Tokens)</li>
+                    <li>15% Pre-Order for early investors (150,000,000 Pasha Tokens)</li>
+                </ul>
+                <p>There will be no burning or minting of Pasha Tokens. 150,000,000 Pasha Tokens will be awarded to the top 5 people with the most likes on Twitter and Reddit platforms weekly (total of 10 people), with 100,000 Pasha Tokens given to each. This event will continue for 50 weeks.</p>
+                <p>The remaining 100 million Pasha Token reward pool will be:</p>
+                <ul>
+                    <li>25 million will be distributed as 250,000 Pasha Tokens to winners of weekly Pashket art contests. This contest will run for 100 weeks.</li>
+                    <li>75 million will be reserved for new contests and projects next year.</li>
+                </ul>
+                <p>Note: You can only benefit from these rewards once. We should also give opportunities to our other friends.</p>
+                
+                <h3>Token Economy-2</h3>
+                <p>Pasha Token Pre-Order aims for 1,500,000 out of 150,000,000 Pasha Tokens to be worth $100 in Solana. If the Pre-Order sales are successfully completed, we will be able to create a liquidity pool worth $10,000 in Solana. 100,000,000 Pasha Tokens will be used for the first public trading pool. According to the Raydium bot, since this liquidity pool will subsequently mean that Pasha’s initial launch value is 100,000,000 Pasha Tokens = $10,000, the starting value of Pasha Token will be $0.0001. The first buyers from the Pre-Order will directly own an asset worth $150.</p>
+                <p>When the Pasha Token pre-order is completed, 10% will be publicly listed on the Raydium market. All Solana from the Pre-Order will be used for the liquidity pool.</p>
+                
+                <h3>Pasha Token Pool</h3>
+                <p>This year, only 100,000,000 Pasha Tokens will be allocated for the liquidity pool. When we enter 2026, another 100,000,000 will be added to the pool. Similarly, 100,000,000 will be added in 2027, and finally, another 100,000,000 Pasha Tokens will be added in 2028 to increase liquidity.</p>
+                <h3>Technological Infrastructure</h3>
+                <p>Pasha Token, a memecoin project created on the Solana network, is shaped according to the amount of Pasha Tokens you hold. If you hold 5% or more of the Pasha Token supply, you become a "Pashket".</p>
+                <p>Special events will be held every 6 months for Pashkets.</p>
+                
+                <h3>Community and Marketing Strategy</h3>
+                <p>An effective marketing strategy will be developed to create and grow the Pasha Token community. We will inform our community through social media, forums, and events.</p>
+                
+                <h3>Development Timeline (RoadMap)</h3>
+                <ul>
+                    <li>Phase 1: Initial sales and promotion process of Pasha Token (2024 - Q1)</li>
+                    <li>Phase 2: Community events and contests (2024 - Q2)</li>
+                    <li>Phase 3: Initial listing process of Pasha Token (2024 - Q3)</li>
+                    <li>Phase 4: Special event for Pashkets (2024 - Q4)</li>
+                </ul>
+                
+                <h3>Competitor Analysis</h3>
+                <p>Compared to similar memecoin projects, Pasha Token offers an innovative approach. We aim to differentiate by prioritizing community participation.</p>
+                
+                <h3>Risks and Challenges</h3>
+                <p>The success of the Pasha Token project depends on market conditions and community support. However, we have a strong team and strategy to overcome these challenges.</p>
+                
+                <h3>Conclusion and Call to Action</h3>
+                <p>We are bringing together our love and passion for cats with Pasha Token. We invite everyone to join Pasha Token and be a part of our community.</p>
+            </div>
         </div>
     </div>
 </body>

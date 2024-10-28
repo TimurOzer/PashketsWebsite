@@ -1,0 +1,101 @@
+<style>
+    #myPDF {
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        margin: 0; /* Default body margin kaldırıldı */
+        font-family: 'Kanit', sans-serif; /* Daha akıcı bir yazı fontu */
+    background: linear-gradient(90deg, #6F4E37, #8B6549, #A67B5B);
+    }
+
+    .button-container {
+        margin: 20px 0; /* Üst ve alt için boşluk */
+        text-align: center; /* Butonları ortala */
+    }
+
+    .button {
+        display: inline-block;
+        margin: 5px; /* Butonlar arasında boşluk */
+        padding: 10px 15px; /* İç boşluk */
+        background-color: #6F4E37; /* Buton arka plan rengi */
+        color: #FED8B1; /* Buton yazı rengi */
+        border: 2px solid #FED8B1; /* Kenar rengi */
+        text-decoration: none; /* Altı çizgiyi kaldır */
+        border-radius: 5px; /* Köşe yuvarlama */
+        transition: all 0.3s; /* Geçiş efekti */
+    }
+
+    .button:hover {
+        background-color: #ECB176; /* Hover rengi */
+        color: #3d3d3d; /* Hover yazı rengi */
+        box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7); /* Parlama efekti */
+        transform: scale(1.1); /* Butonları büyüt */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş efekti */
+    }
+
+    /* İçerik alanı stili */
+    .content-area {
+        max-width: 800px; /* Maksimum genişlik */
+        height: auto; /* Otomatik yükseklik */
+        margin: 0 auto; /* Ortalamak için yan boşluklar */
+        border: 2px solid #ccc; /* Kenar rengi */
+        border-radius: 5px; /* Köşe yuvarlama */
+        padding: 20px; /* İçerik alanı için boşluk */
+        background-color: #A67B5B; /* Arka plan rengi */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+        overflow-y: auto; /* Taşmayı önlemek için dikey kaydırma çubuğu ekle */
+        max-height: 600px; /* Maksimum yükseklik */
+    }
+
+    h1, h2, h3 {
+        font-family: 'Kanit', sans-serif; /* Daha akıcı bir yazı fontu */
+        color: #FED8B1; /* Başlık rengi */
+        text-shadow: none; /* Kenar gölgesini kaldırır */
+        outline: none; /* Kenarlığı kaldırır */
+        text-align: center; /* Başlıkları ortala */
+        margin-bottom: 10px; /* Başlıkların altında boşluk */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Ana başlık boyutu */
+    }
+
+    h2 {
+        font-size: 2em; /* Bölüm başlıkları */
+        margin-top: 20px; /* Bölüm başlıkları için üst boşluk */
+    }
+
+    h3 {
+        font-size: 1.5em; /* Alt bölüm başlıkları */
+        margin-top: 15px; /* Alt bölüm başlıkları için üst boşluk */
+    }
+
+    .content-area p {
+        text-align: left; /* Metni sola hizala */
+        color: #FED8B1; /* Yazı rengi */
+        font-size: 18px; /* Yazı boyutu */
+        line-height: 1.6; /* Satır aralığı */
+        margin: 10px 0; /* Paragraflar için boşluk */
+    }
+
+    .content-area ul {
+        text-align: left; /* Liste öğelerini sola hizala */
+        color: #FED8B1; /* Liste öğeleri yazı rengi */
+        padding-left: 20px; /* Liste için girinti */
+        margin: 0; /* Liste marjını kaldır */
+        font-size: 18px; /* Liste boyutunu artır */
+    }
+
+    .content-area ul li {
+        margin-bottom: 10px; /* Liste öğeleri arasında boşluk */
+    }
+
+    .text-content {
+        padding: 20px; /* İçerik alanı için boşluk */
+        background-color: #A67B5B; /* Arka plan rengi */
+        border-radius: 5px; /* Köşe yuvarlama */
+        margin-top: 20px; /* Üstten boşluk */
+    }
+</style>
