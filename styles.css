@@ -26,22 +26,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #1f1f1f; /* Daha koyu bir ana arka plan */
-    color: #f0f0f0; /* Metinlerde daha açık bir gri */
+    background-color: #6F4E37; /* Daha koyu bir ana arka plan */
+    color: #FED8B1; /* Metinlerde daha açık bir gri */
     font-family: 'Kanit', sans-serif; /* Kanit fontunu ekledik */
-    background: linear-gradient(90deg, #aba9aa, #625c59, #2a2018);
+    background: linear-gradient(90deg, #6F4E37, #A67B5B, #ECB176);
     background-size: 400% 400%;
     animation: gradientAnimation 45s ease infinite; /* Arka planda hareketli renk değişimi */
 }
 
 
 h1, h2, h3 {
-    color: #ff6a00; /* Başlıklarda parlak turuncu */
+    color: #FED8B1; 
     -webkit-text-stroke: 1.5px #000000; /* Dış çizgi kalınlığı ve rengi */
 }
 
 p {
-    color: #d9d9d9; /* Paragraflarda daha yumuşak bir gri */
+    color: #FED8B1; /* Paragraflarda daha yumuşak bir gri */
 }
 
 .container {
@@ -62,16 +62,16 @@ p {
     display: inline-block;
     margin: 5px;
     padding: 10px 15px;
-    background-color: #ff6a00;
-    color: #1f1f1f;
-    border: 2px solid white;
+    background-color: #6F4E37;
+    color: #FED8B1;
+    border: 2px solid #FED8B1;
     text-decoration: none;
     border-radius: 5px;
     transition: all 0.3s;
 }
 
 .button:hover {
-    background-color: white;
+    background-color: #ECB176;
     color: #3d3d3d;
     box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7); /* Parlama efekti */
     transform: scale(1.1); /* Butonları biraz büyüt */
@@ -97,8 +97,8 @@ p {
 }
 
 .card {
-    background-color: #2b2b2b; /* Koyu arka plan */
-    color: white;
+    background-color: #6F4E37; /* Koyu arka plan */
+    color: #FED8B1;
     min-width: 200px; /* Minimum genişlik */
     width: 550px; /* Genişliği artırdık */
     padding: 40px; /* İç boşluk artırıldı */
@@ -121,7 +121,7 @@ p {
 }
 
 .card.active {
-    border: 2px solid #ff6a00; /* Aktif kartta turuncu vurgusu */
+    border: 2px solid #FED8B1; 
     display: block; /* Sadece aktif kartı göster */
     opacity: 1;
     transform: translateY(0); /* Yukarıdan kayarak gelsin */
@@ -140,12 +140,12 @@ p {
 
 /* Kart başlıkları ve metinlerin kontrastı için */
 .card h3 {
-    color: #ff6a00; /* Başlıklarda parlak turuncu */
+    color: #FED8B1; 
     margin-bottom: 10px;
 }
 
 .card p {
-    color: #d9d9d9; /* Kart metni daha açık gri */
+    color: #FED8B1; /* Kart metni daha açık gri */
 }
 
 /* Kart geçişleri */
@@ -184,8 +184,8 @@ html {
 .left-aligned-list li {
     margin-bottom: 10px;   /* Maddeler arasında boşluk */
     line-height: 1.6;      /* Satır yüksekliği ayarı */
-    color: #333;           /* Yazı rengi */
-    font-size: 16px;       /* Yazı boyutu */
+    color: #FED8B1;           /* Yazı rengi */
+    font-size: 18px;       /* Yazı boyutu */
 }
 
         /* Social Buttons Container */
@@ -203,7 +203,7 @@ html {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: #007bff;
+            background-color: #6F4E37;
             color: white;
             font-size: 24px;
             text-decoration: none;
@@ -211,7 +211,7 @@ html {
             position: relative;
         }
         .social-button:hover {
-            background-color: #0056b3;
+            background-color: #FED8B1;
             transform: scale(1.1);
         }
         /* Tooltip Styling */
