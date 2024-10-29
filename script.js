@@ -144,11 +144,31 @@ function renderPreOrderChart() {
             plugins: {
                 legend: {
                     display: false
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function (context) {
+                            if (context.dataIndex === 0) {
+                                return `Tokens: ${currentTokens.toLocaleString()} / ${targetTokens.toLocaleString()}`;
+                            } else {
+                                return `Amount: $${currentAmount.toLocaleString()} / $${targetAmount.toLocaleString()}`;
+                            }
+                        }
+                    }
                 }
             }
         }
     });
+
+    // Hedef ve Ulaşılan miktarı grafik altına ekleyin
+    const chartContainer = document.getElementById('chartInfo');
+    chartContainer.innerHTML = `
+        <p>Target Tokens: ${targetTokens.toLocaleString()}, Current Tokens: ${currentTokens.toLocaleString()}</p>
+        <p>Target Amount: $${targetAmount.toLocaleString()}, Collected Amount: $${currentAmount.toLocaleString()}</p>
+    `;
 }
 
 // Sayfa yüklendiğinde grafik fonksiyonunu çalıştır
 document.addEventListener('DOMContentLoaded', renderPreOrderChart);
+
+
