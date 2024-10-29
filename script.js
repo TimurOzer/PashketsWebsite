@@ -105,7 +105,7 @@ window.addEventListener('scroll', revealSectionsOnScroll);
 const targetTokens = 150000000;
 const targetAmount = 10000;
 const currentTokens = 150000000; // Güncel pre-order token miktarı (örnek değer)
-const currentAmount = 1000; // Toplanan miktar (örnek değer)
+const currentAmount = 0; // Toplanan miktar (örnek değer)
 
 // Grafik fonksiyonu
 function renderPreOrderChart() {

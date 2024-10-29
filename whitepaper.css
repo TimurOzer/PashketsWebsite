@@ -98,4 +98,42 @@
         border-radius: 5px; /* Köşe yuvarlama */
         margin-top: 20px; /* Üstten boşluk */
     }
+
+    /* Mobil cihazlar için medya sorgusu */
+    @media (max-width: 768px) {
+        .content-area {
+            padding: 15px;
+            max-width: 100%;
+            max-height: none;
+        }
+
+        h1 {
+            font-size: 2em; /* Ana başlık boyutunu küçült */
+        }
+
+        h2 {
+            font-size: 1.8em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+        }
+
+        .content-area p, .content-area ul {
+            font-size: 16px; /* Mobil için yazı boyutu */
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button {
+            width: 90%;
+            max-width: 300px;
+            padding: 8px 12px;
+            font-size: 16px;
+            margin: 8px 0;
+        }
 </style>

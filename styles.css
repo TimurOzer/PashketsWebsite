@@ -79,13 +79,37 @@ p {
 }
 
 @media (max-width: 768px) {
-    .card-container {
-        width: 100%; /* Mobil cihazlar için kart genişliğini ayarlama */
+    .container {
+        padding: 10px; /* Genel iç boşluk ayarı */
     }
-    .button {
-        width: 100%; /* Butonları tam genişlik yap */
+
+    .card-container, .button {
+        width: 100%; /* Tam genişlik */
+    }
+
+    h1, h2, h3 {
+        font-size: 1.5em; /* Mobil için başlık boyutlarını küçült */
+        text-align: center;
+    }
+
+    p, li {
+        font-size: 16px; /* Mobil için yazı boyutunu küçült */
+        line-height: 1.4;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column; /* Butonları alt alta getir */
+        align-items: stretch; /* Tam genişlik kapla */
+    }
+
+    .content-area {
+        max-height: none; /* Yükseklik sınırı kaldır, tam görünüm sağla */
+        overflow-y: visible;
+        padding: 10px; /* İç boşluk azalt */
     }
 }
+
 
 
 .card-container {
