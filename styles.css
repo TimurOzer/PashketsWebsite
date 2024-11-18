@@ -1,4 +1,6 @@
 .section {
+    margin-bottom: 50px; /* Adjust to ensure the sections are spaced well */
+    padding-bottom: 20px; /* Add padding if needed, but avoid large values */
     display: none; /* Tüm bölümleri başlangıçta gizle */
     padding: 50px;
     color: white;
@@ -20,8 +22,9 @@
 }
 
 body {
+ overflow: auto; /* Ensure body and html can scroll */
     margin: 0;
-    height: 100vh;
+ min-height: 100%; /* Make sure the body has enough height to scroll */
     display: flex;
     flex-direction: column;
   overflow-x: hidden;
@@ -181,6 +184,7 @@ p {
 
 html {
     scroll-behavior: smooth; /* Akıcı kaydırma özelliği */
+ overflow: auto; /* Ensure body and html can scroll */
 }
 
 @keyframes gradientAnimation {
@@ -338,9 +342,11 @@ html {
 }
 
 #home {
+height: auto; /* Ensure the home section can expand based on content */
   position: relative;
   margin-bottom: 50px; /* Adjust space between sections */
   padding: 20px;
+ overflow: visible; /* Make sure the home section doesn't restrict scrolling */
 }
 
 #home h1 {
@@ -361,6 +367,7 @@ html {
 }
 
 #pashkets-frame {
+    position: relative; /* Avoid using absolute unless necessary */
   margin-top: 30px;
   padding: 20px;
   background-color: #f9f9f9; /* Optional background */
