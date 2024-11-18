@@ -24,6 +24,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+  overflow-x: hidden;
     justify-content: center;
     align-items: center;
     background-color: #6F4E37; /* Daha koyu bir ana arka plan */
@@ -336,4 +337,55 @@ html {
     color: #f39c12; /* Optional: change text color on hover */
 }
 
+#home {
+  position: relative;
+  margin-bottom: 50px; /* Adjust space between sections */
+  padding: 20px;
+}
 
+#home h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+#home p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+#home canvas {
+  display: block;
+  margin: 0 auto; /* Center the canvas */
+  max-width: 100%;
+  height: auto;
+}
+
+#pashkets-frame {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9; /* Optional background */
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+.frame-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.frame-item {
+  text-align: center;
+}
+
+.frame-image {
+  border-radius: 50%; /* Make images circular */
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.frame-text {
+  font-size: 1rem;
+  color: #333;
+}
