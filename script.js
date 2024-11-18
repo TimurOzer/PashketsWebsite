@@ -169,6 +169,7 @@ function renderPreOrderChart() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Resim URL'leri
     const images = {
         base: 'https://raw.githubusercontent.com/TimurOzer/PashketsWebsite/main/img/cat.png', // Kedi resmi
         hats: [
@@ -180,7 +181,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const baseImage = document.getElementById('cat-image'); // Kedi resmi
     const hatImage = document.getElementById('hat-image'); // Şapka resmi
-    let selectedHatIndex = 0; // Varsayılan şapka
+    let selectedHatIndex = 0; // Başlangıçta varsayılan şapka
+
+    // Başlangıçta kedi resmi yükle
+    baseImage.src = images.base;
 
     // Şapka değiştirme fonksiyonu
     function changeHat(hatIndex) {
@@ -188,6 +192,17 @@ document.addEventListener('DOMContentLoaded', function () {
         hatImage.src = images.hats[selectedHatIndex]; // Şapkanın kaynağını güncelle
         hatImage.style.display = 'block'; // Şapkayı göster
     }
+
+    // Şapka seçenekleri (butonlara tıklama)
+    document.getElementById('hat1-btn').addEventListener('click', function () {
+        changeHat(0); // 1. şapka
+    });
+    document.getElementById('hat2-btn').addEventListener('click', function () {
+        changeHat(1); // 2. şapka
+    });
+    document.getElementById('hat3-btn').addEventListener('click', function () {
+        changeHat(2); // 3. şapka
+    });
 
     // İndirme fonksiyonu
     document.getElementById('download-button').addEventListener('click', function () {
@@ -206,20 +221,7 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error("Error generating image:", error);
         });
     });
-
-    // Şapka seçeneklerini ekleme
-    document.getElementById('hat1-btn').addEventListener('click', function () {
-        changeHat(0); // 1. şapka
-    });
-    document.getElementById('hat2-btn').addEventListener('click', function () {
-        changeHat(1); // 2. şapka
-    });
-    document.getElementById('hat3-btn').addEventListener('click', function () {
-        changeHat(2); // 3. şapka
-    });
 });
-
-
 
 
 // Sayfa yüklendiğinde grafik fonksiyonunu çalıştır
