@@ -314,3 +314,26 @@ html {
     color: #3d3d3d;
 }
 
+#socials .socials-container a {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+    font-size: 16px; /* Adjust text size */
+}
+
+#socials .socials-container img {
+    width: 40px; /* Adjust icon size */
+    height: 40px; /* Keep the aspect ratio */
+    margin-bottom: 5px; /* Space between image and text */
+    transition: transform 0.3s ease; /* Optional: for a hover effect */
+}
+
+#socials .socials-container a:hover img {
+    transform: scale(1.1); /* Optional: scale up icon when hovered */
+}
+
+#socials .socials-container a:hover {
+    color: #f39c12; /* Optional: change text color on hover */
+}
+
+
