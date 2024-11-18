@@ -168,6 +168,24 @@ function renderPreOrderChart() {
     `;
 }
 
+// Şapka değiştirme fonksiyonu
+function changeHat(hatImageSrc) {
+    const hatImage = document.getElementById('hat-image');
+    hatImage.src = hatImageSrc;
+    hatImage.style.display = 'block';
+}
+
+// İndirme fonksiyonu
+document.getElementById('download-button').addEventListener('click', function () {
+    const canvasContainer = document.getElementById('canvas-container');
+    html2canvas(canvasContainer).then(canvas => {
+        const link = document.createElement('a');
+        link.download = 'pashket.png';
+        link.href = canvas.toDataURL();
+        link.click();
+    });
+});
+
 // Sayfa yüklendiğinde grafik fonksiyonunu çalıştır
 document.addEventListener('DOMContentLoaded', renderPreOrderChart);
 

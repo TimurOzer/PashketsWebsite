@@ -111,23 +111,28 @@
             </div>
         </div>
 
-        <div id="bePashket" class="section">
-            <h2 class="large-text">Join the Pashket Community Today!</h2>
-            <p class="normal-text">
-                <strong>Access to Exclusive Channels:</strong> Pashkets can access channels on Discord that are only open to them and participate in community decisions.
-            </p>
-            <p class="normal-text">
-                <strong>Priority in Events:</strong> Plays a significant role in community events with advantages like exclusive rewards, competitions, and voting rights.
-            </p>
-            <p class="normal-text">
-                <strong>The Power of the Pashket Title:</strong> A unique role, a respected position within the community, and privileges gained as a holder of a certain amount of tokens.
-            </p>
-    <!-- Join Button -->
-    <div class="button-container">
-        <a href="https://discord.gg/Gv5KAP3QT7" target="_blank" class="button">Join Pashket Community</a>
-    </div>
+<div id="bePashket" class="section">
+    <h2 class="large-text">Create Your Pashket!</h2>
+    <div id="editor">
+        <!-- Görüntülenen kedi resmi ve şapka -->
+        <div id="canvas-container">
+            <img id="cat-image" src="cat.png" alt="Base Cat">
+            <img id="hat-image" src="" alt="Hat" style="display: none;">
         </div>
 
+        <!-- Şapka seçenekleri -->
+        <div id="hat-options">
+            <button onclick="changeHat('hat1.png')">Hat 1</button>
+            <button onclick="changeHat('hat2.png')">Hat 2</button>
+            <button onclick="changeHat('hat3.png')">Hat 3</button>
+        </div>
+
+        <!-- İndir butonu -->
+        <button id="download-button">Download Your Pashket</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
         <script src="script.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </div>
