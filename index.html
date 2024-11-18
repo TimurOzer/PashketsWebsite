@@ -115,10 +115,9 @@
     <h2 class="large-text">Create Your Pashket!</h2>
     <div id="editor">
         <!-- Görüntülenen kedi resmi ve şapka -->
-        <div id="canvas-container">
-<img id="cat-image" src="img/cat.png" alt="Base Cat">
-
-            <img id="hat-image" src="" alt="Hat" style="display: none;">
+        <div id="canvas-container" style="position: relative; width: 300px; height: 300px;">
+            <img id="cat-image" src="img/cat.png" alt="Base Cat" style="position: absolute; width: 100%; height: 100%;">
+            <img id="hat-image" src="" alt="Hat" style="position: absolute; width: 50%; top: 0; left: 25%; display: none;">
         </div>
 
         <!-- Şapka seçenekleri -->
@@ -132,6 +131,7 @@
         <button id="download-button">Download Your Pashket</button>
     </div>
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
         <script src="script.js"></script>

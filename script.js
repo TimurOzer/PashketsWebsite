@@ -168,23 +168,32 @@ function renderPreOrderChart() {
     `;
 }
 
-// Şapka değiştirme fonksiyonu
-function changeHat(hatImageSrc) {
-    const hatImage = document.getElementById('hat-image');
-    hatImage.src = hatImageSrc;
-    hatImage.style.display = 'block';
-}
+document.addEventListener('DOMContentLoaded', function () {
+    // Şapka değiştirme fonksiyonu
+    function changeHat(hatImageSrc) {
+        const hatImage = document.getElementById('hat-image');
+        hatImage.src = hatImageSrc;
+        hatImage.style.display = 'block';
+    }
 
-// İndirme fonksiyonu
-document.getElementById('download-button').addEventListener('click', function () {
-    const canvasContainer = document.getElementById('canvas-container');
-    html2canvas(canvasContainer).then(canvas => {
-        const link = document.createElement('a');
-        link.download = 'pashket.png';
-        link.href = canvas.toDataURL();
-        link.click();
+    // İndirme fonksiyonu
+    document.getElementById('download-button').addEventListener('click', function () {
+        const canvasContainer = document.getElementById('canvas-container');
+        html2canvas(canvasContainer, { backgroundColor: null, useCORS: true }).then(canvas => {
+            const link = document.createElement('a');
+            link.download = 'pashket.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }).catch(error => {
+            console.error("Error generating image:", error);
+        });
     });
+
+    // Şapka seçeneklerini ekleme
+    window.changeHat = changeHat; // Global erişim için
 });
+
+
 
 // Sayfa yüklendiğinde grafik fonksiyonunu çalıştır
 document.addEventListener('DOMContentLoaded', renderPreOrderChart);
