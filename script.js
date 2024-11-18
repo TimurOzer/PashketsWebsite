@@ -223,6 +223,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+<audio id="background-music" loop>
+  <source src="https://raw.githubusercontent.com/TimurOzer/PashketsWebsite/main/Mog%20Sound.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  // Play music on page load
+  window.onload = function() {
+    var music = document.getElementById('background-music');
+    music.play();
+  };
+</script>
+
 
 // Sayfa yüklendiğinde grafik fonksiyonunu çalıştır
 document.addEventListener('DOMContentLoaded', renderPreOrderChart);
