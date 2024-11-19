@@ -414,17 +414,18 @@ height: auto; /* Ensure the home section can expand based on content */
         box-sizing: border-box; /* Padding'i hesaba kat */
     }
 
-    .card {
-        flex: 1 1 calc(50% - 20px); /* Kartlar genişliklerini otomatik ayarlar */
-        max-width: 400px; /* Maksimum genişlik */
-        padding: 15px; /* İç boşluk */
-        font-size: 1em; /* Yazı boyutu */
-        text-align: center; /* Ortala */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-        box-sizing: border-box;
-        border-radius: 8px;
-        background: #fff;
-    }
+.card {
+    flex: 1 1 calc(50% - 20px); /* Kartlar genişliklerini otomatik ayarlar */
+    max-width: 400px; /* Maksimum genişlik */
+    padding: 15px; /* İç boşluk */
+    font-size: 1em; /* Yazı boyutu */
+    text-align: center; /* Ortala */
+    border-radius: 8px;
+    background: inherit; /* Arka plan rengini orijinal yap */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    box-sizing: border-box;
+}
+
 
     .button-container {
         display: flex;
@@ -441,23 +442,27 @@ height: auto; /* Ensure the home section can expand based on content */
         text-align: center;
     }
 
-    .frame-container {
-        display: flex;
-        flex-wrap: wrap; /* Resimleri ekran genişliğine göre hizala */
-        justify-content: center; /* Ortala */
-        gap: 10px; /* Aralarındaki boşluk */
-        width: 100%; /* Tüm genişlik */
-    }
+.frame-container {
+    display: flex;
+    flex-direction: column; /* Alt alta diz */
+    align-items: center; /* Ortala */
+    gap: 10px; /* İkonlar arası boşluk */
+    width: 100%; /* Tüm genişlik */
+    padding: 10px;
+}
 
-    .frame-image {
-        width: 70px; /* Daha küçük resimler */
-        height: 70px;
-        border-radius: 50%; /* Daire yap */
-        object-fit: cover; /* Resmi düzgün kırp */
-    }
+.frame-image {
+    width: 60px; /* Daha küçük resimler */
+    height: 60px;
+    border-radius: 50%; /* Daire yap */
+    object-fit: cover; /* Resmi düzgün kırp */
+    margin: 0 auto; /* Ortala */
+}
 
-    .frame-text {
-        font-size: 0.9rem; /* Yazıyı küçült */
-        text-align: center; /* Yazıyı ortala */
-    }
+.frame-text {
+    font-size: 12px; /* Yazıyı küçült */
+    text-align: center; /* Yazıyı ortala */
+    margin-top: 5px;
+}
+ 
 }
