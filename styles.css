@@ -363,7 +363,7 @@ height: auto; /* Ensure the home section can expand based on content */
   color: #333;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
     body {
         padding: 0 10px; /* Daha dar bir iç boşluk */
     }
@@ -408,7 +408,8 @@ height: auto; /* Ensure the home section can expand based on content */
     }
 
     .card {
-        width: 100%; /* Kartları tam genişlik yap */
+        flex: 1 1 100%; /* Kartlar tam genişlik kaplar */
+        max-width: 90%; /* Ekran genişliğinin %90'ını kullan */
         padding: 20px; /* İç boşlukları azalt */
         font-size: 1em; /* Yazı boyutunu küçült */
     }
@@ -416,6 +417,7 @@ height: auto; /* Ensure the home section can expand based on content */
     .card-container {
         flex-direction: column; /* Kartları alt alta diz */
         gap: 10px; /* Aralarındaki boşluğu daralt */
+        align-items: center;
     }
 
     .button-container {
