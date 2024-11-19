@@ -365,78 +365,99 @@ height: auto; /* Ensure the home section can expand based on content */
 
 @media (max-width: 1080px) {
     body {
-        padding: 0 15px; /* Daha geniş iç boşluk */
+        padding: 0; /* İç boşluğu kaldır */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     h1, h2, h3 {
-        font-size: 1.5em; /* Başlıkları daha okunabilir yap */
+        font-size: 1.3em; /* Başlık boyutunu optimize et */
         text-align: center;
     }
 
     p, li {
-        font-size: 16px; /* Yazı boyutunu artır */
-        line-height: 1.6; /* Satır aralığını iyileştir */
+        font-size: 14px; /* Yazı boyutunu mobil için küçült */
+        line-height: 1.5; /* Satır aralığı */
+        text-align: center; /* Yazıyı ortaya hizala */
     }
 
     #home {
-        padding: 20px; /* Ana bölüm boşluğu */
+        padding: 10px; /* Ana bölüm padding */
+        width: 100%;
+        max-width: 1080px; /* İçerik genişliğini sınırla */
+        box-sizing: border-box; /* Kenar boşluklarını hesaba kat */
     }
 
-    #home canvas {
-        max-width: 100%; /* Kanvas genişliği ekranla sınırlı */
-        height: auto;
-    }
-
+    #home canvas,
     #preOrderChart {
-        max-width: 100%; /* Ekran genişliğine uyumlu */
-        height: auto;
+        max-width: 100%; /* Kanvas ve grafik ekran genişliğine uyumlu */
+        height: auto; 
+        margin: 0 auto; /* Ortala */
+        display: block;
     }
 
     .social-button {
-        width: 50px; /* Sosyal medya butonlarını büyüt */
-        height: 50px;
-        font-size: 24px;
+        width: 40px; /* Buton boyutlarını küçült */
+        height: 40px;
+        font-size: 20px;
+        margin: 5px; /* Butonlar arasında boşluk */
     }
 
     .card-container {
         display: flex;
-        flex-wrap: wrap; /* Kartları alt alta ve yan yana hizala */
-        justify-content: center; /* Kartları merkeze hizala */
-        gap: 20px; /* Kartlar arasındaki boşluğu artır */
+        flex-wrap: wrap; /* Kartları ekran genişliğine göre alt alta ya da yan yana hizala */
+        justify-content: center; /* Ortala */
+        gap: 10px; /* Kartlar arası boşluk */
+        width: 100%; /* Tüm ekran genişliğini kullan */
+        padding: 10px; /* İç boşluk */
+        box-sizing: border-box; /* Padding'i hesaba kat */
     }
 
     .card {
-        flex: 1 1 calc(50% - 20px); /* Kart genişliği ekranın yarısı kadar */
-        max-width: 400px; /* Maksimum genişlik sınırı */
-        padding: 20px; /* İç boşluk */
-        font-size: 1.2em; /* Yazı boyutunu artır */
-        text-align: center; /* İçeriği ortala */
+        flex: 1 1 calc(50% - 20px); /* Kartlar genişliklerini otomatik ayarlar */
+        max-width: 400px; /* Maksimum genişlik */
+        padding: 15px; /* İç boşluk */
+        font-size: 1em; /* Yazı boyutu */
+        text-align: center; /* Ortala */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+        box-sizing: border-box;
+        border-radius: 8px;
+        background: #fff;
     }
 
     .button-container {
-        flex-direction: column; /* Butonları alt alta hizala */
-        gap: 15px;
+        display: flex;
+        flex-wrap: wrap; /* Butonları ekran genişliğine göre hizala */
+        justify-content: center; /* Ortala */
+        gap: 10px; /* Butonlar arası boşluk */
     }
 
-    .container {
-        display: flex;
-        flex-direction: column; /* Alt alta içerik */
-        align-items: center; /* Ortala */
+    .button {
+        padding: 10px 15px; /* Daha küçük padding */
+        font-size: 14px; /* Yazı boyutunu azalt */
+        border-radius: 8px;
+        width: auto; /* Buton genişliği içeriğe göre ayarlanır */
+        text-align: center;
     }
 
     .frame-container {
         display: flex;
-        flex-wrap: wrap; /* Resimler yan yana sığmazsa alt alta geçer */
+        flex-wrap: wrap; /* Resimleri ekran genişliğine göre hizala */
         justify-content: center; /* Ortala */
-        gap: 15px;
+        gap: 10px; /* Aralarındaki boşluk */
+        width: 100%; /* Tüm genişlik */
     }
 
     .frame-image {
-        width: 100px; /* Resimleri daha büyük yap */
-        height: 100px;
+        width: 70px; /* Daha küçük resimler */
+        height: 70px;
+        border-radius: 50%; /* Daire yap */
+        object-fit: cover; /* Resmi düzgün kırp */
     }
 
     .frame-text {
-        font-size: 1rem; /* Yazıyı büyüt */
+        font-size: 0.9rem; /* Yazıyı küçült */
+        text-align: center; /* Yazıyı ortala */
     }
 }
