@@ -363,89 +363,80 @@ height: auto; /* Ensure the home section can expand based on content */
   color: #333;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     body {
-        padding: 0 10px; /* Daha dar bir iç boşluk */
+        padding: 0 15px; /* Daha geniş iç boşluk */
     }
-.button {
-    width: 100%; /* Mobilde tam genişlik */
-    padding: 10px 15px; /* Tıklama alanını artır */
-}
 
     h1, h2, h3 {
-        font-size: 1.2em; /* Başlıkları küçült */
+        font-size: 1.5em; /* Başlıkları daha okunabilir yap */
         text-align: center;
     }
 
     p, li {
-        font-size: 14px; /* Yazı boyutunu daha küçük yap */
-        line-height: 1.5; /* Satır aralığını koru */
+        font-size: 16px; /* Yazı boyutunu artır */
+        line-height: 1.6; /* Satır aralığını iyileştir */
     }
 
     #home {
-        padding: 10px; /* Ana bölüm iç boşluğunu azalt */
+        padding: 20px; /* Ana bölüm boşluğu */
     }
 
     #home canvas {
-        max-width: 100%; /* Kanvas genişliğini ekranla sınırlı tut */
+        max-width: 100%; /* Kanvas genişliği ekranla sınırlı */
         height: auto;
     }
 
-#preOrderChart {
-    max-width: 100%; /* Ekran genişliğine uyumlu */
-    height: auto;
-}
-
+    #preOrderChart {
+        max-width: 100%; /* Ekran genişliğine uyumlu */
+        height: auto;
+    }
 
     .social-button {
-        width: 40px; /* Sosyal medya butonlarını küçült */
-        height: 40px;
-        font-size: 20px;
-    }
-
-    .social-button span {
-        font-size: 10px; /* Tooltip yazısını küçült */
-    }
-
-    .card {
-        flex: 1 1 100%; /* Kartlar tam genişlik kaplar */
-        max-width: 90%; /* Ekran genişliğinin %90'ını kullan */
-        padding: 20px; /* İç boşlukları azalt */
-        font-size: 1em; /* Yazı boyutunu küçült */
+        width: 50px; /* Sosyal medya butonlarını büyüt */
+        height: 50px;
+        font-size: 24px;
     }
 
     .card-container {
-        flex-direction: column; /* Kartları alt alta diz */
-        gap: 10px; /* Aralarındaki boşluğu daralt */
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap; /* Kartları alt alta ve yan yana hizala */
+        justify-content: center; /* Kartları merkeze hizala */
+        gap: 20px; /* Kartlar arasındaki boşluğu artır */
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 20px); /* Kart genişliği ekranın yarısı kadar */
+        max-width: 400px; /* Maksimum genişlik sınırı */
+        padding: 20px; /* İç boşluk */
+        font-size: 1.2em; /* Yazı boyutunu artır */
+        text-align: center; /* İçeriği ortala */
     }
 
     .button-container {
         flex-direction: column; /* Butonları alt alta hizala */
-        gap: 10px;
+        gap: 15px;
     }
 
-.container {
-    display: flex;
-    flex-direction: column; /* Alt alta içerik */
-    align-items: center; /* Ortala */
-}
+    .container {
+        display: flex;
+        flex-direction: column; /* Alt alta içerik */
+        align-items: center; /* Ortala */
+    }
 
-.frame-container {
-    display: flex;
-    flex-wrap: wrap; /* Küçük ekranlarda yan yana sığmayanlar alt alta geçsin */
-    justify-content: center; /* Ortala */
-    gap: 10px;
-}
-
+    .frame-container {
+        display: flex;
+        flex-wrap: wrap; /* Resimler yan yana sığmazsa alt alta geçer */
+        justify-content: center; /* Ortala */
+        gap: 15px;
+    }
 
     .frame-image {
-        width: 80px; /* Resimleri küçült */
-        height: 80px;
+        width: 100px; /* Resimleri daha büyük yap */
+        height: 100px;
     }
 
     .frame-text {
-        font-size: 0.9rem; /* Yazıyı küçült */
+        font-size: 1rem; /* Yazıyı büyüt */
     }
 }
-
