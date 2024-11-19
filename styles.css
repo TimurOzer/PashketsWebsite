@@ -367,6 +367,10 @@ height: auto; /* Ensure the home section can expand based on content */
     body {
         padding: 0 10px; /* Daha dar bir iç boşluk */
     }
+.button {
+    width: 100%; /* Mobilde tam genişlik */
+    padding: 10px 15px; /* Tıklama alanını artır */
+}
 
     h1, h2, h3 {
         font-size: 1.2em; /* Başlıkları küçült */
@@ -386,6 +390,12 @@ height: auto; /* Ensure the home section can expand based on content */
         max-width: 100%; /* Kanvas genişliğini ekranla sınırlı tut */
         height: auto;
     }
+
+#preOrderChart {
+    max-width: 100%; /* Ekran genişliğine uyumlu */
+    height: auto;
+}
+
 
     .social-button {
         width: 40px; /* Sosyal medya butonlarını küçült */
@@ -413,11 +423,19 @@ height: auto; /* Ensure the home section can expand based on content */
         gap: 10px;
     }
 
-    .frame-container {
-        flex-direction: column; /* Pashkets bölümü alt alta gelsin */
-        align-items: center; /* Ortala */
-        gap: 15px;
-    }
+.container {
+    display: flex;
+    flex-direction: column; /* Alt alta içerik */
+    align-items: center; /* Ortala */
+}
+
+.frame-container {
+    display: flex;
+    flex-wrap: wrap; /* Küçük ekranlarda yan yana sığmayanlar alt alta geçsin */
+    justify-content: center; /* Ortala */
+    gap: 10px;
+}
+
 
     .frame-image {
         width: 80px; /* Resimleri küçült */
