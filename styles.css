@@ -82,40 +82,6 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;c
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 10px; /* Genel iç boşluk ayarı */
-    }
-
-    .card-container, .button {
-        width: 100%; /* Tam genişlik */
-    }
-
-    h1, h2, h3 {
-        font-size: 1.5em; /* Mobil için başlık boyutlarını küçült */
-        text-align: center;
-    }
-
-    p, li {
-        font-size: 16px; /* Mobil için yazı boyutunu küçült */
-        line-height: 1.4;
-    }
-
-    .button-container {
-        display: flex;
-        flex-direction: column; /* Butonları alt alta getir */
-        align-items: stretch; /* Tam genişlik kapla */
-    }
-
-    .content-area {
-        max-height: none; /* Yükseklik sınırı kaldır, tam görünüm sağla */
-        overflow-y: visible;
-        padding: 10px; /* İç boşluk azalt */
-    }
-}
-
-
-
 .card-container {
     display: flex;
     width: 600px;
@@ -396,3 +362,70 @@ height: auto; /* Ensure the home section can expand based on content */
   font-size: 1rem;
   color: #333;
 }
+
+@media (max-width: 480px) {
+    body {
+        padding: 0 10px; /* Daha dar bir iç boşluk */
+    }
+
+    h1, h2, h3 {
+        font-size: 1.2em; /* Başlıkları küçült */
+        text-align: center;
+    }
+
+    p, li {
+        font-size: 14px; /* Yazı boyutunu daha küçük yap */
+        line-height: 1.5; /* Satır aralığını koru */
+    }
+
+    #home {
+        padding: 10px; /* Ana bölüm iç boşluğunu azalt */
+    }
+
+    #home canvas {
+        max-width: 100%; /* Kanvas genişliğini ekranla sınırlı tut */
+        height: auto;
+    }
+
+    .social-button {
+        width: 40px; /* Sosyal medya butonlarını küçült */
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .social-button span {
+        font-size: 10px; /* Tooltip yazısını küçült */
+    }
+
+    .card {
+        width: 100%; /* Kartları tam genişlik yap */
+        padding: 20px; /* İç boşlukları azalt */
+        font-size: 1em; /* Yazı boyutunu küçült */
+    }
+
+    .card-container {
+        flex-direction: column; /* Kartları alt alta diz */
+        gap: 10px; /* Aralarındaki boşluğu daralt */
+    }
+
+    .button-container {
+        flex-direction: column; /* Butonları alt alta hizala */
+        gap: 10px;
+    }
+
+    .frame-container {
+        flex-direction: column; /* Pashkets bölümü alt alta gelsin */
+        align-items: center; /* Ortala */
+        gap: 15px;
+    }
+
+    .frame-image {
+        width: 80px; /* Resimleri küçült */
+        height: 80px;
+    }
+
+    .frame-text {
+        font-size: 0.9rem; /* Yazıyı küçült */
+    }
+}
+
