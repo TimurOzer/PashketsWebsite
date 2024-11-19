@@ -397,11 +397,16 @@ height: auto; /* Ensure the home section can expand based on content */
         display: block;
     }
 
+    .socials-container {
+        flex-direction: column; /* Alt alta sıralar */
+        align-items: center; /* Ortalar */
+        gap: 10px; /* Aralarındaki boşluk */
+    }
+
     .social-button {
-        width: 40px; /* Buton boyutlarını küçült */
-        height: 40px;
-        font-size: 20px;
-        margin: 5px; /* Butonlar arasında boşluk */
+        width: 50px; /* Daha küçük butonlar */
+        height: 50px;
+        font-size: 18px; /* Yazı boyutunu küçült */
     }
 
     .card-container {
