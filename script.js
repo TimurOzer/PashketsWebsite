@@ -172,12 +172,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Resim URL'leri
     const images = {
         base: 'https://raw.githubusercontent.com/TimurOzer/PashketsWebsite/main/img/cat.png', // Kedi resmi
-        hats: [
-            'https://raw.githubusercontent.com/TimurOzer/PashketsWebsite/main/img/hat1.png',
-            'https://raw.githubusercontent.com/TimurOzer/PashketsWebsite/main/img/hat2.png',
-            'https://raw.githubusercontent.com/TimurOzer/PashketsWebsite/main/img/hat3.png'
-        ]
+        hats: [] // 38 şapka URL'sini buraya ekleyeceğiz
     };
+
+    // 38 şapka URL'sini otomatik oluşturma
+    for (let i = 1; i <= 38; i++) {
+        images.hats.push(`https://raw.githubusercontent.com/TimurOzer/PashketsWebsite/main/img/hat${i}.png`);
+    }
 
     const baseImage = document.getElementById('cat-image'); // Kedi resmi
     const hatImage = document.getElementById('hat-image'); // Şapka resmi
@@ -185,23 +186,23 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Başlangıçta kedi resmi yükle
     baseImage.src = images.base;
+    hatImage.src = images.hats[selectedHatIndex];
 
     // Şapka değiştirme fonksiyonu
-    function changeHat(hatIndex) {
-        selectedHatIndex = hatIndex; // Seçilen şapkayı güncelle
+    function changeHat(index) {
+        selectedHatIndex = (index + images.hats.length) % images.hats.length; // Döngüsel indeks
         hatImage.src = images.hats[selectedHatIndex]; // Şapkanın kaynağını güncelle
         hatImage.style.display = 'block'; // Şapkayı göster
     }
 
-    // Şapka seçenekleri (butonlara tıklama)
-    document.getElementById('hat1-btn').addEventListener('click', function () {
-        changeHat(0); // 1. şapka
+    // Next butonuna tıklama
+    document.getElementById('next-hat').addEventListener('click', function () {
+        changeHat(selectedHatIndex + 1); // Bir sonraki şapka
     });
-    document.getElementById('hat2-btn').addEventListener('click', function () {
-        changeHat(1); // 2. şapka
-    });
-    document.getElementById('hat3-btn').addEventListener('click', function () {
-        changeHat(2); // 3. şapka
+
+    // Previous butonuna tıklama
+    document.getElementById('prev-hat').addEventListener('click', function () {
+        changeHat(selectedHatIndex - 1); // Bir önceki şapka
     });
 
     // İndirme fonksiyonu
@@ -222,6 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
 
 
 // Sayfa yüklendiğinde grafik fonksiyonunu çalıştır

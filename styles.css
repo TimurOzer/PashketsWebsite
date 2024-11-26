@@ -234,19 +234,22 @@ html {
     margin: 0 auto;
 }
 
-#cat-image,
-#hat-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+#cat-image {
+    width: 300px;
+    height: 300px;
+    position: relative;
     z-index: 1;
 }
 
 #hat-image {
+    width: 300px; /* Kedinin genişliğine uyumlu */
+    height: 300px; /* Oranı koruyarak yüksekliği ayarla */
+    position: absolute; /* Kedinin üzerine yerleştir */
+    top: 0; /* Kediyle hizala */
+    left: 0; /* Kediyle hizala */
     z-index: 2;
 }
+
 
 #hat-options {
     text-align: center;
@@ -471,3 +474,26 @@ height: auto; /* Ensure the home section can expand based on content */
 }
  
 }
+
+#hat-options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#hat-options button {
+    padding: 10px 15px;
+    background-color: #6F4E37;
+    color: #FED8B1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#hat-options button:hover {
+    background-color: #ECB176;
+    color: #3d3d3d;
+}
+
