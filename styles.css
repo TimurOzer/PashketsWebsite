@@ -235,8 +235,8 @@ html {
 }
 
 #cat-image {
-    width: 300px;
-    height: 300px;
+    width: 290px;
+    height: 290px;
     position: relative;
     z-index: 1;
 }
