@@ -1,3 +1,15 @@
+:root {
+    --background-color: #121212; /* Arka plan */
+    --primary-color: #00FFA3; /* Solana yeşili */
+    --secondary-color: #DC1FFF; /* Neon mor */
+    --accent-color: #10BBE4; /* Turkuaz */
+    --button-color: #FF4D6A; /* Düğme rengi */
+    --text-color: #E0E0E0; /* Başlık metin rengi */
+    --subtext-color: #A3A3A3; /* Alt metin rengi */
+    --hover-color: #26FF91; /* Hover efekti */
+    --background-gradient: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+}
+
 .section {
     margin-bottom: 50px; /* Adjust to ensure the sections are spaced well */
     padding-bottom: 20px; /* Add padding if needed, but avoid large values */
