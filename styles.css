@@ -63,6 +63,9 @@ p {
 .container {
     text-align: center;
     color: white;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -509,4 +512,56 @@ height: auto; /* Ensure the home section can expand based on content */
     background-color: #ECB176;
     color: #3d3d3d;
 }
+
+#memes {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#memes .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.memes-container {
+    display: flex;
+    overflow-x: auto; /* Yatay kaydırma çubuğu */
+    overflow-y: hidden; /* Dikey kaydırma engellenir */
+    gap: 10px;
+    padding: 10px;
+    white-space: nowrap; /* İçeriği yatayda sıralar */
+    max-width: 100%; /* Ekran genişliğine uyumlu */
+    box-sizing: border-box; /* Padding'in genişlik hesaplamalarına dahil edilmesi */
+}
+
+.meme-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.meme-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.meme-image.enlarged {
+    transform: scale(1.5);
+    z-index: 10;
+    cursor: zoom-out;
+}
+
+.memes-container::-webkit-scrollbar {
+    height: 8px; /* Kaydırma çubuğunun yüksekliği */
+}
+
+.memes-container::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 10px;
+}
+
 

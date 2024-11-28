@@ -224,6 +224,37 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const memesContainer = document.querySelector('.memes-container');
+    
+    // Meme görsellerini oluştur
+    for (let i = 1; i <= 59; i++) {
+        const meme = document.createElement('img');
+        meme.src = `https://raw.githubusercontent.com/TimurOzer/PashketsWebsite/refs/heads/main/img/pashamemes%20(${i}).jpg`;
+        meme.alt = `Meme ${i}`;
+        meme.classList.add('meme-image');  // .meme-image sınıfını kullan
+
+        meme.addEventListener('click', function() {
+            // Eğer meme büyütülmüşse, indir ve küçült
+            if (meme.classList.contains('enlarged')) {
+                const link = document.createElement('a');
+                link.href = meme.src;
+                link.download = `meme_${i}.jpg`;
+                link.click();
+                meme.classList.remove('enlarged');  // Büyütmeyi kaldır
+            } else {
+                // Tüm resimlerin büyütme sınıfını kaldır
+                const memes = document.querySelectorAll('.meme-image');
+                memes.forEach(item => item.classList.remove('enlarged'));
+
+                // Sadece tıklanan resme "enlarged" sınıfını ekle
+                meme.classList.add('enlarged');
+            }
+        });
+        
+        memesContainer.appendChild(meme);
+    }
+});
 
 
 // Sayfa yüklendiğinde grafik fonksiyonunu çalıştır
