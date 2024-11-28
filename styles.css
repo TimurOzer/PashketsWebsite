@@ -397,7 +397,8 @@ height: auto; /* Ensure the home section can expand based on content */
         max-width: 100%; /* Kanvas ve grafik ekran genişliğine uyumlu */
         height: auto; 
         margin: 0 auto; /* Ortala */
-        display: block;
+        display: block; /* Grafik tamamen gizlenir */
+
     }
 
     .socials-container {
