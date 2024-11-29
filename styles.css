@@ -1,21 +1,24 @@
 :root {
-    --background-color: #121212; /* Arka plan */
-    --primary-color: #00FFA3; /* Solana yeşili */
-    --secondary-color: #DC1FFF; /* Neon mor */
-    --accent-color: #10BBE4; /* Turkuaz */
-    --button-color: #FF4D6A; /* Düğme rengi */
-    --text-color: #E0E0E0; /* Başlık metin rengi */
-    --subtext-color: #A3A3A3; /* Alt metin rengi */
-    --hover-color: #26FF91; /* Hover efekti */
-    --background-gradient: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+    --background-color: #121212; /* Arka plan için temel renk: var(--background-color); */
+    --primary-color: #00FFA3; /* Solana yeşili, temel vurgu rengi: var(--primary-color); */
+    --secondary-color: #DC1FFF; /* Neon mor, alternatif vurgu rengi: var(--secondary-color); */
+    --accent-color: #10BBE4; /* Turkuaz, ek vurgu rengi: var(--accent-color); */
+    --button-color: #FF4D6A; /* Düğme için ana renk: var(--button-color); */
+    --text-color: #E0E0E0; /* Başlık metin rengi: var(--text-color); */
+    --subtext-color: #A3A3A3; /* Alt metin ve açıklamalar için gri ton: var(--subtext-color); */
+    --hover-color: #26FF91; /* Hover efekti için renk: var(--hover-color); */
+--background-gradient: radial-gradient(circle, var(--rainbow-color), var(--rainbow2-color));
+    --rainbow-color: #000220; /* Solana yeşili, temel vurgu rengi: var(--primary-color); */
+    --rainbow2-color: #C64A0D; /* Neon mor, alternatif vurgu rengi: var(--secondary-color); */
 }
+
 
 .section {
     margin-bottom: 50px; /* Adjust to ensure the sections are spaced well */
     padding-bottom: 20px; /* Add padding if needed, but avoid large values */
     display: none; /* Tüm bölümleri başlangıçta gizle */
     padding: 50px;
-    color: white;
+    color: var(--secondary-color);
     text-align: center;
     opacity: 0;
     transform: translateY(20px);
@@ -42,27 +45,26 @@ body {
   overflow-x: hidden;
     justify-content: center;
     align-items: center;
-    background-color: #6F4E37; /* Daha koyu bir ana arka plan */
-    color: #FED8B1; /* Metinlerde daha açık bir gri */
+    color: var(--primary-color); /* Metinlerde daha açık bir gri */
     font-family: 'Kanit', sans-serif; /* Kanit fontunu ekledik */
-    background: linear-gradient(90deg, #6F4E37, #8B6549, #A67B5B);
+    background: var(--background-gradient);
+    animation: gradientAnimation 15s ease infinite; /* Arka planda hareketli renk değişimi */
     background-size: 400% 400%;
-    animation: gradientAnimation 45s ease infinite; /* Arka planda hareketli renk değişimi */
 }
 
 
 h1, h2, h3 {
-    color: #FED8B1; 
+    color: var(--primary-color); 
     -webkit-text-stroke: 1.5px #000000; /* Dış çizgi kalınlığı ve rengi */
 }
 
 p {
-    color: #FED8B1; /* Paragraflarda daha yumuşak bir gri */
+    color: var(--text-color); /* Paragraflarda daha yumuşak bir gri */
 }
 
 .container {
     text-align: center;
-    color: white;
+    color: var(--secondary-color);
     width: 100%;
     max-width: 100%;
     box-sizing: border-box;
@@ -81,8 +83,8 @@ p {
     display: inline-block;
     margin: 5px;
     padding: 10px 15px;
-    background-color: #6F4E37;
-    color: #FED8B1;
+    background-color: var(--button-color);
+    color: var(--text-color);
     border: 2px solid #FED8B1;
     text-decoration: none;
     border-radius: 5px;
@@ -90,8 +92,8 @@ p {
 }
 
 .button:hover {
-    background-color: #ECB176;
-    color: #3d3d3d;
+    background-color: var(--hover-color);
+    color: var(--text-color);
     box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7); /* Parlama efekti */
     transform: scale(1.1); /* Butonları biraz büyüt */
     transition: transform 0.3s ease, box-shadow 0.3s ease;c
@@ -106,8 +108,8 @@ p {
 }
 
 .card {
-    background-color: #6F4E37; /* Koyu arka plan */
-    color: #FED8B1;
+    background-color: var(--background-color); /* Koyu arka plan */
+    color: var(--text-color);
     min-width: 200px; /* Minimum genişlik */
     width: 550px; /* Genişliği artırdık */
     padding: 40px; /* İç boşluk artırıldı */
@@ -130,7 +132,7 @@ p {
 }
 
 .card.active {
-    border: 2px solid #FED8B1; 
+    border: 2px solid var(--text-color); 
     display: block; /* Sadece aktif kartı göster */
     opacity: 1;
     transform: translateY(0); /* Yukarıdan kayarak gelsin */
@@ -149,12 +151,12 @@ p {
 
 /* Kart başlıkları ve metinlerin kontrastı için */
 .card h3 {
-    color: #FED8B1; 
+    color: var(--text-color); 
     margin-bottom: 10px;
 }
 
 .card p {
-    color: #FED8B1; /* Kart metni daha açık gri */
+    color: var(--text-color); /* Kart metni daha açık gri */
 }
 
 /* Kart geçişleri */
@@ -194,7 +196,7 @@ html {
 .left-aligned-list li {
     margin-bottom: 10px;   /* Maddeler arasında boşluk */
     line-height: 1.6;      /* Satır yüksekliği ayarı */
-    color: #FED8B1;           /* Yazı rengi */
+    color: var(--text-color);           /* Yazı rengi */
     font-size: 18px;       /* Yazı boyutu */
 }
 
@@ -213,15 +215,15 @@ html {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            background-color: #6F4E37;
-            color: white;
+            background-color: var(--button-color);
+            color: var(--text-color);
             font-size: 24px;
             text-decoration: none;
             transition: background-color 0.3s, transform 0.2s;
             position: relative;
         }
         .social-button:hover {
-            background-color: #FED8B1;
+            background-color: var(--hover-color);
             transform: scale(1.1);
         }
         /* Tooltip Styling */
@@ -229,8 +231,8 @@ html {
             display: none;
             position: absolute;
             bottom: -25px;
-            background-color: #333;
-            color: #fff;
+            background-color: var(--button-color);
+            color: var(--text-color);
             padding: 4px 8px;
             border-radius: 4px;
             font-size: 12px;
@@ -274,8 +276,8 @@ html {
 #hat-options button {
     padding: 10px 15px;
     margin: 5px;
-    background-color: #6F4E37;
-    color: #FED8B1;
+    background-color: var(--button-color);
+    color: var(--text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -283,15 +285,15 @@ html {
 }
 
 #hat-options button:hover {
-    background-color: #ECB176;
-    color: #3d3d3d;
+    background-color: var(--hover-color);
+    color: var(--text-color);
 }
 
 #download-button {
     margin-top: 20px;
     padding: 10px 15px;
-    background-color: #6F4E37;
-    color: #FED8B1;
+    background-color: var(--button-color);
+    color: var(--text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -299,8 +301,8 @@ html {
 }
 
 #download-button:hover {
-    background-color: #ECB176;
-    color: #3d3d3d;
+    background-color: var(--button-color);
+    color: var(--text-color);
 }
 
 #socials .socials-container a {
@@ -322,7 +324,7 @@ html {
 }
 
 #socials .socials-container a:hover {
-    color: #f39c12; /* Optional: change text color on hover */
+    color: var(--text-color); /* Optional: change text color on hover */
 }
 
 #home {
@@ -354,7 +356,9 @@ height: auto; /* Ensure the home section can expand based on content */
     position: relative; /* Avoid using absolute unless necessary */
   margin-top: 30px;
   padding: 20px;
-  background-color: #f9f9f9; /* Optional background */
+  /background-color: var(--background-color); /* Optional background */
+    background: var(--background-gradient);
+    animation: gradientAnimation 15s ease infinite; /* Arka planda hareketli renk değişimi */
   border-radius: 8px; /* Optional rounded corners */
 }
 
@@ -378,7 +382,7 @@ height: auto; /* Ensure the home section can expand based on content */
 
 .frame-text {
   font-size: 1rem;
-  color: #333;
+  color: var(--text-color);
 }
 
 @media (max-width: 1080px) {
@@ -398,6 +402,7 @@ height: auto; /* Ensure the home section can expand based on content */
         font-size: 14px; /* Yazı boyutunu mobil için küçült */
         line-height: 1.5; /* Satır aralığı */
         text-align: center; /* Yazıyı ortaya hizala */
+        color: var(--text-color);
     }
 
     #home {
@@ -500,8 +505,8 @@ height: auto; /* Ensure the home section can expand based on content */
 
 #hat-options button {
     padding: 10px 15px;
-    background-color: #6F4E37;
-    color: #FED8B1;
+    background-color: var(--button-color);
+    color: var(--text-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -509,13 +514,13 @@ height: auto; /* Ensure the home section can expand based on content */
 }
 
 #hat-options button:hover {
-    background-color: #ECB176;
-    color: #3d3d3d;
+    background-color: var(--hover-color);
+    color: var(--text-color);
 }
 
 #memes {
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
     text-align: center;
 }
 
@@ -560,8 +565,24 @@ height: auto; /* Ensure the home section can expand based on content */
 }
 
 .memes-container::-webkit-scrollbar-thumb {
-    background-color: #aaa;
+    background: var(--background-gradient);
+    animation: gradientAnimation 15s ease infinite; /* Arka planda hareketli renk değişimi */
     border-radius: 10px;
 }
 
+/* Yazılar için kutu tasarımı */
+.content-box {
+    background-color: var(--background-color); /* Arka plan rengi */
+    border: 2px solid #ccc; /* Çerçeve rengi */
+    border-radius: 10px; /* Köşeleri yuvarlama */
+    padding: 20px; /* İçerik boşluğu */
+    margin-top: 20px; /* Üstten boşluk */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+}
 
+/* Yazı renkleri ve boyutları */
+.content-box ul {
+    color: var(--text-color); /* Yazı rengi */
+    font-size: 16px;
+    line-height: 1.6;
+}
