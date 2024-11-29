@@ -7,9 +7,10 @@
     --text-color: #E0E0E0; /* Başlık metin rengi: var(--text-color); */
     --subtext-color: #A3A3A3; /* Alt metin ve açıklamalar için gri ton: var(--subtext-color); */
     --hover-color: #26FF91; /* Hover efekti için renk: var(--hover-color); */
---background-gradient: radial-gradient(circle, var(--rainbow-color), var(--rainbow2-color));
-    --rainbow-color: #000220; /* Solana yeşili, temel vurgu rengi: var(--primary-color); */
-    --rainbow2-color: #C64A0D; /* Neon mor, alternatif vurgu rengi: var(--secondary-color); */
+--background-gradient: linear-gradient(45deg, var(--rainbow2-color), var(--rainbow-color));
+--background-gradient2: radial-gradient(circle, var(--primary-color), var(--secondary-color));
+    --rainbow-color: #4d194d; /* Solana yeşili, temel vurgu rengi: var(--primary-color); */
+    --rainbow2-color: #006466; /* Neon mor, alternatif vurgu rengi: var(--secondary-color); */
 }
 
 
@@ -519,14 +520,14 @@ height: auto; /* Ensure the home section can expand based on content */
 }
 
 #memes {
-    padding: 20px;
+    padding: 10px;
     background-color: var(--background-color);
     text-align: center;
 }
 
 #memes .section-title {
     font-size: 2rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .memes-container {
@@ -565,7 +566,7 @@ height: auto; /* Ensure the home section can expand based on content */
 }
 
 .memes-container::-webkit-scrollbar-thumb {
-    background: var(--background-gradient);
+    background: var(--background-gradient2);
     animation: gradientAnimation 15s ease infinite; /* Arka planda hareketli renk değişimi */
     border-radius: 10px;
 }
