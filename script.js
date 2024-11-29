@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const memesContainer = document.querySelector('.memes-container');
     
     // Meme görsellerini oluştur
-    for (let i = 1; i <= 59; i++) {
+    for (let i = 1; i <= 68; i++) {
         const meme = document.createElement('img');
         meme.src = `https://raw.githubusercontent.com/TimurOzer/PashketsWebsite/refs/heads/main/img/pashamemes%20(${i}).jpg`;
         meme.alt = `Meme ${i}`;
