@@ -517,10 +517,16 @@ height: auto; /* Ensure the home section can expand based on content */
 }
 
 #memes {
-    padding: 10px;
-    background-color: var(--background-color);
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: #121212; /* Arka plan rengi */
+    z-index: 10; /* Diğer öğelerin üzerinde görünmesini sağlar */
+    padding: 20px 0;
     text-align: center;
+    color: var(--text-color);
 }
+
 
 #memes .section-title {
     font-size: 2rem;
