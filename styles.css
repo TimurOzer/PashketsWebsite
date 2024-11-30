@@ -231,7 +231,9 @@ html {
         }
         /* Tooltip Styling */
         .social-button span {
-            display: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: absolute;
             bottom: -25px;
             background-color: var(--button-color);
@@ -245,7 +247,23 @@ html {
         }
         .social-button:hover span {
             display: block;
+            justify-content: center;
             opacity: 1;
+        }
+
+        
+
+        .socials-container .social-button i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.7rem;
+            height: 100%;
+            width: 100%;
+        }
+
+        .socials-container .social-button i:hover {
+            color: var(--button-color);
         }
 #canvas-container {
     position: relative;
@@ -307,6 +325,7 @@ html {
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif bir gölge */
     transition: transform 0.2s ease, background-color 0.3s ease;
+    margin-top: 30px;
 }
 
 #download-button:hover {
@@ -530,9 +549,10 @@ height: auto; /* Ensure the home section can expand based on content */
 #memes {
     position: sticky;
     bottom: 0;
+    left: 0;
     width: 100%;
     background-color: #121212; /* Arka plan rengi */
-    z-index: 10; /* Diğer öğelerin üzerinde görünmesini sağlar */
+    z-index: 10;
     padding: 20px 0;
     text-align: center;
     color: var(--text-color);
