@@ -81,13 +81,18 @@ p {
 
 .button {
     display: inline-block;
-    background-color: var(--button-color);
-    color: var(--text-color);
-    border: 2px solid #FED8B1;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: all 0.3s;
+    padding: 10px 20px;
+    background-color: #FED8B1; /* Pastel bir turuncu */
+    color: #333; /* Yazıyı belirginleştirmek için koyu renk */
+    font-size: 16px;
+    font-weight: bold;
+    border: none; /* Çerçeve yok */
+    border-radius: 25px; /* Yumuşak kenarlar için */
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif bir gölge */
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
+
 
 .button:hover {
     background-color: var(--hover-color);
@@ -272,14 +277,17 @@ html {
 }
 
 #hat-options button {
-    padding: 10px 15px;
-    margin: 5px;
-    background-color: var(--button-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FED8B1; /* Pastel bir turuncu */
+    color: #333; /* Yazıyı belirginleştirmek için koyu renk */
+    font-size: 16px;
+    font-weight: bold;
+    border: none; /* Çerçeve yok */
+    border-radius: 25px; /* Yumuşak kenarlar için */
     cursor: pointer;
-    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif bir gölge */
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 #hat-options button:hover {
@@ -288,14 +296,17 @@ html {
 }
 
 #download-button {
-    margin-top: 20px;
-    padding: 10px 15px;
-    background-color: var(--button-color);
-    color: var(--text-color);
-    border: none;
-    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FED8B1; /* Pastel bir turuncu */
+    color: #333; /* Yazıyı belirginleştirmek için koyu renk */
+    font-size: 16px;
+    font-weight: bold;
+    border: none; /* Çerçeve yok */
+    border-radius: 25px; /* Yumuşak kenarlar için */
     cursor: pointer;
-    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif bir gölge */
+    transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 #download-button:hover {
@@ -691,6 +702,87 @@ font-size: 2vw; /* Daha küçük başlıklar için */
 color: white;
 }
 
+#roadmap {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#roadmap h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.snake-roadmap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    position: relative;
+}
+
+.snake-step {
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(145deg, #f7a046, #e57d1b);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.snake-step h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.snake-step p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.snake-step:hover {
+    transform: scale(1.2);
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+.snake-roadmap::before {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 3px;
+    background: #f7a046;
+    top: 50%;
+    left: 10%;
+    z-index: -1;
+}
+
+#roadmap .roadmap-controls {
+    margin-top: 30px; /* Üst kısımdan boşluk ekler */
+    text-align: center; /* Butonları ortalar */
+}
+
+#roadmap .button {
+    margin: 0 15px; /* Yanlara 15px boşluk ekler */
+    padding: 10px 20px; /* Butonun içindeki yazıyı daha ferah yapar */
+    display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+    .snake-roadmap {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
 
 

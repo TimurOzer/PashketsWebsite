@@ -256,6 +256,67 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Roadmap adımları
+const roadmapSteps = [
+    { quarter: "Q1 2024", details: "Token Launch & Community Building" },
+    { quarter: "Q2 2024", details: "Exchange Listings & Reward Programs" },
+    { quarter: "Q3 2024", details: "Partnerships & Ecosystem Development" },
+    { quarter: "Q4 2024", details: "Major Update & Future Plans" },
+    { quarter: "Q1 2025", details: "New Partnerships & Market Expansion" },
+    { quarter: "Q2 2025", details: "Launch of Staking Program" },
+    { quarter: "Q3 2025", details: "Integration with DeFi Platforms" },
+    { quarter: "Q4 2025", details: "Expansion to New Markets" },
+];
+
+// Başlangıç indexi
+let currentStepIndex = 0;
+
+// DOM öğeleri
+const roadmapContainer = document.getElementById("snakeRoadmap");
+const prevButton = document.getElementById("prevStep");
+const nextButton = document.getElementById("nextStep");
+
+// Yol haritasını güncelle
+function updateRoadmap(direction) {
+    if (direction === "next" && currentStepIndex < roadmapSteps.length - 1) {
+        currentStepIndex++;
+        addStepToRoadmap(roadmapSteps[currentStepIndex]);
+    } else if (direction === "prev" && currentStepIndex > 0) {
+        currentStepIndex--;
+        removeLastStep();
+    }
+}
+
+// Yeni bir adım ekle
+function addStepToRoadmap(step) {
+    const stepElement = document.createElement("div");
+    stepElement.className = "snake-step";
+    stepElement.setAttribute("data-step", step.quarter);
+
+    const stepTitle = document.createElement("h3");
+    stepTitle.innerText = step.quarter;
+
+    const stepDetails = document.createElement("p");
+    stepDetails.innerText = step.details;
+
+    stepElement.appendChild(stepTitle);
+    stepElement.appendChild(stepDetails);
+
+    roadmapContainer.appendChild(stepElement);
+}
+
+// Son adımı kaldır
+function removeLastStep() {
+    const steps = document.querySelectorAll(".snake-step");
+    if (steps.length > 0) {
+        roadmapContainer.removeChild(steps[steps.length - 1]);
+    }
+}
+
+// Düğme olayları
+prevButton.addEventListener("click", () => updateRoadmap("prev"));
+nextButton.addEventListener("click", () => updateRoadmap("next"));
+
 
 // Sayfa yüklendiğinde grafik fonksiyonunu çalıştır
 document.addEventListener('DOMContentLoaded', renderPreOrderChart);
