@@ -81,8 +81,6 @@ p {
 
 .button {
     display: inline-block;
-    margin: 5px;
-    padding: 10px 15px;
     background-color: var(--button-color);
     color: var(--text-color);
     border: 2px solid #FED8B1;
@@ -354,35 +352,35 @@ height: auto; /* Ensure the home section can expand based on content */
 
 #pashkets-frame {
     position: relative; /* Avoid using absolute unless necessary */
-  margin-top: 30px;
-  padding: 20px;
-  /background-color: var(--background-color); /* Optional background */
+    margin-top: 30px;
+    padding: 40px; /* Daha fazla padding ile boyutu artırdık */
+    width: 1500px; /* Yatay eksende %100 genişlik */
     background: var(--background-gradient);
     animation: gradientAnimation 15s ease infinite; /* Arka planda hareketli renk değişimi */
-  border-radius: 8px; /* Optional rounded corners */
+    border-radius: 8px; /* Optional rounded corners */
 }
 
 .frame-container {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 30px; /* Daha fazla boşluk */
 }
 
 .frame-item {
-  text-align: center;
+    text-align: center;
 }
 
 .frame-image {
-  border-radius: 50%; /* Make images circular */
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 10px;
+    border-radius: 50%; /* Make images circular */
+    width: 120px; /* Genişlik ve yükseklik artırıldı */
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 20px; /* Alt boşluk artırıldı */
 }
 
 .frame-text {
-  font-size: 1rem;
-  color: var(--text-color);
+    font-size: 1.2rem; /* Font boyutu artırıldı */
+    color: var(--text-color);
 }
 
 @media (max-width: 1080px) {
@@ -586,3 +584,104 @@ height: auto; /* Ensure the home section can expand based on content */
     font-size: 16px;
     line-height: 1.6;
 }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%; /* Tam genişlik */
+    background-color: black; /* Arka plan rengi */
+}
+
+.navbar .title {
+    margin: 0;
+}
+
+.navbar .title h1 {
+    color: white;
+    font-size: 24px; /* Başlık boyutu */
+    margin-left: 100px; /* Başlık sola yaslandı */
+}
+
+.navbar .button-container {
+    display: flex;
+    gap: 5px; /* Butonlar arasındaki boşluk */
+    margin-left: auto; /* Butonları sağa itiyor */
+    margin-right: 100px; /* Butonları sağa yapıştırırken sağda boşluk */
+    align-items: center; /* Butonları dikeyde ortalar */
+    height: 100%; /* Konteynerin tam yüksekliği almasını sağlar */
+}
+
+.navbar .button {
+    background-color: #333333; /* Buton rengi */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+width: 80px; /* Buton genişliği */
+    cursor: pointer;
+    display: flex;
+flex; justify-content: center;
+    align-items: center; /* Butonları dikeyde ortalar */
+    margin-top: -20px; /* Butonları 10px yukarı kaydırır */
+}
+
+.navbar .button:hover {
+    background-color: #ff7878; /* Hover efekti */
+}
+
+
+
+/* İçerik Konteyneri */
+.content-container {
+    display: flex;
+    align-items: center; /* Logo ve içeriği dikeyde ortalar */
+    padding: 40px; /* Konteynerin iç boşluğunu artırır */
+
+}
+
+/* Logo */
+.logo {
+    margin-right: 350px; /* Logo ile içerik arasındaki boşluk */
+}
+
+.logo img {
+    height: 400px; /* Logo boyutunu biraz daha büyüttü */
+}
+
+/* Ana içerik */
+.content {
+    color: white;
+display: flex; 
+flex-direction: column;
+justify-content: center; /* İçeriği dikeyde ortalar */
+}
+
+.content h1 {
+    font-size: 120px; /* Başlık boyutunu artırdı */
+    margin: -20px 0;
+}
+
+.content h2 {
+    font-size: 35px;
+    margin: 0px 0;
+color: white;
+}
+
+.content h3 {
+    font-size: 25px; /* Başlık boyutunu artırdı */
+    margin: 30px 0;
+color: white;
+}
+
+
+
+
+
+
+
+
