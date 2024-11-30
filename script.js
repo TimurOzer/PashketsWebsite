@@ -258,14 +258,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Roadmap adımları
 const roadmapSteps = [
-    { quarter: "Q1 2024", details: "Token Launch & Community Building" },
-    { quarter: "Q2 2024", details: "Exchange Listings & Reward Programs" },
-    { quarter: "Q3 2024", details: "Partnerships & Ecosystem Development" },
-    { quarter: "Q4 2024", details: "Major Update & Future Plans" },
-    { quarter: "Q1 2025", details: "New Partnerships & Market Expansion" },
-    { quarter: "Q2 2025", details: "Launch of Staking Program" },
-    { quarter: "Q3 2025", details: "Integration with DeFi Platforms" },
-    { quarter: "Q4 2025", details: "Expansion to New Markets" },
+    { quarter: "5M", details: "Pasha Token T-Shirt 10 User" },
+    { quarter: "10M", details: "Free NFT drop 25 Wallet" },
+    { quarter: "20M", details: "Pasha Token VIP Channel 50 Users" },
+    { quarter: "50M", details: "1000$ worth Sol 10 Users" },
+    { quarter: "100M", details: "One British Shorthair" },
 ];
 
 // Başlangıç indexi
