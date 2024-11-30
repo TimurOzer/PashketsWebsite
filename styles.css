@@ -635,50 +635,55 @@ flex; justify-content: center;
 }
 
 
-
 /* İçerik Konteyneri */
 .content-container {
     display: flex;
+    justify-content: center; /* Logo ve içeriği yatayda ortalar */
     align-items: center; /* Logo ve içeriği dikeyde ortalar */
     padding: 40px; /* Konteynerin iç boşluğunu artırır */
-
+    width: 100%;
+    height: auto; /* Dikeydeki uzunluğu manuel olarak belirler */
 }
 
 /* Logo */
 .logo {
-    margin-right: 350px; /* Logo ile içerik arasındaki boşluk */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo img {
-    height: 400px; /* Logo boyutunu biraz daha büyüttü */
+    width: 300px; /* Logo boyutu küçültüldü */
+    height: auto; /* Yükseklik otomatik olarak ayarlanır */
 }
 
 /* Ana içerik */
 .content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* İçeriği dikeyde ortalar */
+    align-items: flex-start; /* İçeriği yatayda sola yaslar */
     color: white;
-display: flex; 
-flex-direction: column;
-justify-content: center; /* İçeriği dikeyde ortalar */
 }
 
 .content h1 {
-    font-size: 120px; /* Başlık boyutunu artırdı */
-    margin: -20px 0;
-}
-
-.content h2 {
-    font-size: 35px;
+font-size: 3vw; /* Daha küçük başlıklar için */
     margin: 0px 0;
 color: white;
 }
 
+.content h2 {
+font-size: 6vw; /* Daha küçük başlıklar için */
+    margin: -20px 0;
+}
+
 .content h3 {
-    font-size: 25px; /* Başlık boyutunu artırdı */
+font-size: 2vw; /* Daha küçük başlıklar için */
     margin: 30px 0;
 color: white;
 }
-
-
 
 
 
