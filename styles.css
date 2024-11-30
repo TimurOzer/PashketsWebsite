@@ -47,8 +47,7 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--primary-color); /* Metinlerde daha açık bir gri */
-    font-family: 'Kanit', sans-serif; /* Kanit fontunu ekledik */
-    background: var(--background-gradient);
+  font-family: 'Funnel Display', sans-serif;    background: var(--background-gradient);
     animation: gradientAnimation 15s ease infinite; /* Arka planda hareketli renk değişimi */
     background-size: 400% 400%;
 }
@@ -56,7 +55,7 @@ body {
 
 h1, h2, h3 {
     color: var(--primary-color); 
-    -webkit-text-stroke: 1.5px #000000; /* Dış çizgi kalınlığı ve rengi */
+    //-webkit-text-stroke: 1.5px #000000; /* Dış çizgi kalınlığı ve rengi */
 }
 
 p {
@@ -123,7 +122,7 @@ p {
     font-size: 1.2em; /* Yazı boyutunu artırdık */
     line-height: 1.5; /* Satır yüksekliğini artırdık */
     text-align: center; /* Metni ortaladık */
-    font-family: 'Kanit', sans-serif; /* Daha akıcı bir yazı fontu */
+  font-family: 'Funnel Display', sans-serif;
 
     opacity: 0;
     transform: translateY(20px);
