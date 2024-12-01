@@ -600,251 +600,74 @@ color: white;
     display: inline-block;
 }
 
-@media (max-width: 1080px) {
-    /* Genel Düzen Ayarları */
-    body, html {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        overflow-x: hidden; /* Yatay kaydırmayı engelle */
+/* Telefonlar için uyumluluk */
+@media (max-width: 768px) {
+    .navbar .title h1 {
+        font-size: 20px; /* Başlık boyutunu küçült */
+        margin-left: 10px; /* Başlığı sola yaklaştır */
     }
 
-    .container {
-        padding: 10px;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box; /* Kenar boşluklarını hesaba kat */
+    .navbar .button-container {
+        margin-left: 0; /* Butonları sola yapıştır */
+        margin-right: 0; /* Sağdaki boşluğu kaldır */
+        gap: 2px; /* Butonlar arasındaki boşluğu azalt */
     }
 
-    /* Başlıklar ve Metin Boyutları */
-    h1, h2, h3 {
-        font-size: 1.5rem; /* Başlık boyutları küçültüldü */
-        text-align: center; /* Ortalanmış başlıklar */
-    }
-
-    p, li {
-        font-size: 0.9rem; /* Metin boyutları küçültüldü */
-        line-height: 1.5; /* Daha okunabilir metin */
-        text-align: justify; /* Metin hizalaması */
-    }
-
-    /* Sosyal Medya Butonları */
-    .socials-container {
-        flex-direction: column; /* Alt alta dizildi */
-        gap: 10px;
-        align-items: center; /* Ortalandı */
-    }
-
-    /* Resimler ve Medya */
-    img, video {
-        max-width: 100%;
-        height: auto; /* Oranı koruyarak ölçeklendirildi */
-        display: block;
-        margin: 0 auto; /* Ortalandı */
-    }
-
-    /* Butonlar */
-    .button {
-        padding: 8px 12px;
+    .navbar .button {
+        padding: 5px 10px;
         font-size: 14px;
-        width: auto; /* İçeriğe göre boyutlandı */
-        text-align: center;
-        margin-bottom: 10px;
+        width: auto; /* Buton genişliğini otomatik ayarla */
+        margin-top: 0; /* Butonları yukarıdan kaydır */
     }
 
-    /* Tablo ve Grafikler */
-    table, canvas {
-        max-width: 100%;
-        overflow-x: auto; /* Yatay kaydırmaya izin ver */
+    .content-container {
+        flex-direction: column; /* Yataydan dikeye geç */
+        padding: 20px; /* Kenar boşluklarını azalt */
     }
 
-    table {
-        display: block; /* Mobilde daha iyi görüntü */
+    .content h1 {
+        font-size: 24px; /* Başlık boyutunu küçült */
     }
 
-    /* #home ve Özel Bölümler */
-    #home {
-        padding: 20px 10px;
+    .content h2 {
+        font-size: 20px; /* Başlık boyutunu küçült */
     }
 
-    #memes .memes-container {
-        display: flex;
-        gap: 10px;
-        flex-wrap: nowrap; /* Yatay kaydırmaya izin verildi */
-        overflow-x: scroll; /* Kaydırma eklendi */
+    .content h3 {
+        font-size: 18px; /* Başlık boyutunu küçült */
     }
 
-    #canvas-container {
-        width: 100%; /* Mobilde tam genişlik */
-        max-width: 300px; /* Maksimum genişlik */
-        margin: 0 auto; /* Ortalandı */
+    #roadmap h2 {
+        font-size: 28px; /* Yol haritası başlık boyutunu küçült */
     }
 
-    #cat-image, #hat-image {
-        width: 100%; /* Mobilde tam genişlik */
+    .snake-step {
+        width: 100px; /* Adım genişliğini küçült */
+        height: 100px; /* Adım yüksekliğini küçült */
     }
 
-    /* Flexbox Düzen Ayarları */
-    .frame-container {
-        flex-direction: column; /* Dikey düzen */
-        gap: 20px;
-        align-items: center;
+    .snake-step h3 {
+        font-size: 12px; /* Adım başlık boyutunu küçült */
     }
 
-    /* Menü veya Navigasyon */
-    nav {
-        flex-direction: column; /* Alt alta dizildi */
-        align-items: center;
+    .snake-step p {
+        font-size: 10px; /* Adım açıklama boyutunu küçült */
     }
 
-    nav a {
-        margin: 5px 0; /* Aralıklar eklendi */
-        font-size: 14px; /* Daha küçük yazı boyutu */
+    .content-box {
+        padding: 10px; /* İçerik kutusu dolgusunu azalt */
+        margin-top: 10px; /* Üst boşluğu azalt */
+    }
+
+    .memes-container {
+        padding: 5px; /* Kutunun iç dolgusu */
+    }
+
+    .meme-image {
+        width: 100px; /* Resmin genişliğini küçült */
+        height: 100px; /* Resmin yüksekliğini küçült */
     }
 }
-
-/* Mobil Uyumluluk için Medya Sorgusu */
-@media (max-width: 1080px) {
-    /* Genel Yapı */
-    body {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .container {
-        width: 100%;
-        padding: 0 10px;
-        box-sizing: border-box;
-    }
-
-    /* Başlıklar ve Metinler */
-    h1 {
-        font-size: 2rem;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    h2, h3 {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    p, li {
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 10px;
-        text-align: justify;
-    }
-
-    /* Görseller ve Medya */
-    img, video {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 10px auto;
-    }
-
-    /* Sosyal Medya Butonları */
-    .socials-container {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-
-    .socials-container a {
-        font-size: 1rem;
-        padding: 10px 15px;
-        text-align: center;
-    }
-
-    /* Butonlar */
-    button {
-        padding: 10px 20px;
-        font-size: 1rem;
-        margin: 10px 0;
-        width: 100%;
-        max-width: 300px;
-    }
-
-    /* Navigasyon ve Menüler */
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    nav a {
-        font-size: 1rem;
-        padding: 8px 12px;
-        text-decoration: none;
-        color: #000;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        text-align: center;
-    }
-
-    /* Tablo ve Grafikler */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
-
-    table th, table td {
-        padding: 8px;
-        text-align: center;
-        border: 1px solid #ddd;
-    }
-
-    canvas {
-        max-width: 100%;
-        margin: 0 auto;
-        display: block;
-    }
-
-    /* Esnek Kutular (Flexbox) */
-    .flex-container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    /* Özel Bölümler */
-    #home {
-        padding: 20px 10px;
-    }
-
-    #memes .memes-container {
-        display: flex;
-        gap: 15px;
-        overflow-x: auto;
-        flex-wrap: nowrap;
-    }
-
-    #canvas-container {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    /* Başlık ve Logolar */
-    #logo {
-        max-width: 200px;
-        height: auto;
-        margin: 0 auto 20px;
-    }
-
-    /* Özel Mobil Uyumlu Tasarım */
-    .responsive-box {
-        width: 100%;
-        max-width: 400px;
-        margin: 0 auto;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-}
-
 
 
 
