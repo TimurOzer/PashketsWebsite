@@ -600,7 +600,7 @@ color: white;
     display: inline-block;
 }
 
-/* Telefonlar için uyumluluk */
+/* Mobil uyumluluk */
 @media (max-width: 768px) {
     .navbar .title h1 {
         font-size: 20px; /* Başlık boyutunu küçült */
@@ -667,7 +667,40 @@ color: white;
         width: 100px; /* Resmin genişliğini küçült */
         height: 100px; /* Resmin yüksekliğini küçült */
     }
+
+    .socials-container {
+        flex-direction: column; /* İkonları dikeyde sırala */
+        align-items: center; /* Dikeyde ortala */
+    }
+
+    .iframe-container {
+        width: 100%; /* Mobilde genişlik %100 */
+        overflow: hidden; /* Yanlardan taşmasını engeller */
+    }
+
+    iframe {
+        width: 90%; /* Iframe'i tam genişlikte kullan */
+        height: auto; /* Yükseklik otomatik */
+    }
+
+    .home-logo-container {
+        flex-direction: column; /* Logo ve yazıları dikeyde sırala */
+        align-items: center; /* Ortala */
+        text-align: center; /* Yazıları ortala */
+    }
+
+    .frame-container {
+        flex-direction: column; /* Pashkets Frame'i dikeyde sırala */
+        align-items: center; /* Ortala */
+        gap: 10px; /* Aralığı ayarla */
+    }
+
+    .content-container .content {
+        align-items: center; /* İçeriği ortala */
+        text-align: center; /* Yazıları ortala */
+    }
 }
+
 
 
 
