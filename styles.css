@@ -608,6 +608,8 @@ color: white;
     }
 
     .navbar .button-container {
+        flex-wrap: wrap; /* Butonları satır içinde sar */
+        justify-content: center; /* Butonları ortala */
         margin-left: 0; /* Butonları sola yapıştır */
         margin-right: 0; /* Sağdaki boşluğu kaldır */
         gap: 2px; /* Butonlar arasındaki boşluğu azalt */
@@ -676,11 +678,12 @@ color: white;
     .iframe-container {
         width: 100%; /* Mobilde genişlik %100 */
         overflow: hidden; /* Yanlardan taşmasını engeller */
+        padding: 0 5px; /* Kenar boşluklarını azalt */
     }
 
     iframe {
-        width: 90%; /* Iframe'i tam genişlikte kullan */
-        height: auto; /* Yükseklik otomatik */
+        width: 400px; /* Iframe'i tam genişlikte kullan */
+        height: 300px; /* Yükseklik otomatik */
     }
 
     .home-logo-container {
@@ -700,6 +703,7 @@ color: white;
         text-align: center; /* Yazıları ortala */
     }
 }
+
 
 
 
