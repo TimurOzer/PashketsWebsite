@@ -102,71 +102,6 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;c
 }
 
-.card-container {
-    display: flex;
-    width: 600px;
-    margin: 20px auto;
-    position: relative;
-    overflow: hidden; /* Kartların konteyner dışına taşmaması için */
-}
-
-.card {
-    background-color: var(--background-color); /* Koyu arka plan */
-    color: var(--text-color);
-    min-width: 200px; /* Minimum genişlik */
-    width: 550px; /* Genişliği artırdık */
-    padding: 40px; /* İç boşluk artırıldı */
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Gölgeleri belirginleştir */
-    display: none; /* Başlangıçta kartları gizle */
-    background-image: url('path/to/image.jpg'); /* Kartlarda arka plan resmi */
-    background-size: cover;
-    background-position: center;
-    font-size: 1.2em; /* Yazı boyutunu artırdık */
-    line-height: 1.5; /* Satır yüksekliğini artırdık */
-    text-align: center; /* Metni ortaladık */
-  font-family: 'Funnel Display', sans-serif;
-
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    overflow-y: auto; /* Kart içeriğinin taşması durumunda kaydırma sağlar */
-    max-height: 80vh; /* Kart yüksekliğini maksimum ekran yüksekliğinin %80'i ile sınırlandırır */
-}
-
-.card.active {
-    border: 2px solid var(--text-color); 
-    display: block; /* Sadece aktif kartı göster */
-    opacity: 1;
-    transform: translateY(0); /* Yukarıdan kayarak gelsin */
-}
-
-/* Hover animasyonu */
-.card:hover {
-    transform: scale(1.05); /* Kartı büyütme */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Daha büyük gölge */
-}
-
-.card.active:hover {
-    transform: scale(1.05); /* Üzerine gelince kartı biraz büyüt */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Gölgeleri daha da artır */
-}
-
-/* Kart başlıkları ve metinlerin kontrastı için */
-.card h3 {
-    color: var(--text-color); 
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: var(--text-color); /* Kart metni daha açık gri */
-}
-
-/* Kart geçişleri */
-.card-container {
-    position: relative;
-    overflow: hidden;
-}
 
 html {
     scroll-behavior: smooth; /* Akıcı kaydırma özelliği */
@@ -411,117 +346,6 @@ height: auto; /* Ensure the home section can expand based on content */
 .frame-text {
     font-size: 1.2rem; /* Font boyutu artırıldı */
     color: var(--text-color);
-}
-
-@media (max-width: 1080px) {
-    body {
-        padding: 0; /* İç boşluğu kaldır */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    h1, h2, h3 {
-        font-size: 1.3em; /* Başlık boyutunu optimize et */
-        text-align: center;
-    }
-
-    p, li {
-        font-size: 14px; /* Yazı boyutunu mobil için küçült */
-        line-height: 1.5; /* Satır aralığı */
-        text-align: center; /* Yazıyı ortaya hizala */
-        color: var(--text-color);
-    }
-
-    #home {
-        padding: 10px; /* Ana bölüm padding */
-        width: 100%;
-        max-width: 1080px; /* İçerik genişliğini sınırla */
-        box-sizing: border-box; /* Kenar boşluklarını hesaba kat */
-    }
-
-    #home canvas,
-    #preOrderChart {
-        max-width: 100%; /* Kanvas ve grafik ekran genişliğine uyumlu */
-        height: auto; 
-        margin: 0 auto; /* Ortala */
-        display: block; /* Grafik tamamen gizlenir */
-
-    }
-
-    .socials-container {
-        flex-direction: column; /* Alt alta sıralar */
-        align-items: center; /* Ortalar */
-        gap: 10px; /* Aralarındaki boşluk */
-    }
-
-    .social-button {
-        width: 50px; /* Daha küçük butonlar */
-        height: 50px;
-        font-size: 18px; /* Yazı boyutunu küçült */
-    }
-
-    .card-container {
-        display: flex;
-        flex-wrap: wrap; /* Kartları ekran genişliğine göre alt alta ya da yan yana hizala */
-        justify-content: center; /* Ortala */
-        gap: 10px; /* Kartlar arası boşluk */
-        width: 100%; /* Tüm ekran genişliğini kullan */
-        padding: 10px; /* İç boşluk */
-        box-sizing: border-box; /* Padding'i hesaba kat */
-    }
-
-.card {
-    flex: 1 1 calc(50% - 20px); /* Kartlar genişliklerini otomatik ayarlar */
-    max-width: 400px; /* Maksimum genişlik */
-    padding: 15px; /* İç boşluk */
-    font-size: 1em; /* Yazı boyutu */
-    text-align: center; /* Ortala */
-    border-radius: 8px;
-    background: inherit; /* Arka plan rengini orijinal yap */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge */
-    box-sizing: border-box;
-}
-
-
-    .button-container {
-        display: flex;
-        flex-wrap: wrap; /* Butonları ekran genişliğine göre hizala */
-        justify-content: center; /* Ortala */
-        gap: 10px; /* Butonlar arası boşluk */
-    }
-
-    .button {
-        padding: 10px 15px; /* Daha küçük padding */
-        font-size: 14px; /* Yazı boyutunu azalt */
-        border-radius: 8px;
-        width: auto; /* Buton genişliği içeriğe göre ayarlanır */
-        text-align: center;
-    }
-
-.frame-container {
-    display: flex;
-    flex-direction: column; /* Alt alta diz */
-    align-items: center; /* Ortala */
-    gap: 10px; /* İkonlar arası boşluk */
-    width: 100%; /* Tüm genişlik */
-    padding: 10px;
-}
-
-.frame-image {
-    width: 60px; /* Daha küçük resimler */
-    height: 60px;
-    border-radius: 50%; /* Daire yap */
-    object-fit: cover; /* Resmi düzgün kırp */
-    margin: 0 auto; /* Ortala */
-}
-
-.frame-text {
-    font-size: 12px; /* Yazıyı küçült */
-    text-align: center; /* Yazıyı ortala */
-    margin-top: 5px;
-}
- 
 }
 
 #hat-options {
@@ -796,11 +620,107 @@ color: white;
     display: inline-block;
 }
 
-
+/* Mobil uyumluluk */
 @media (max-width: 768px) {
-    .snake-roadmap {
-        flex-direction: column;
-        align-items: center;
+    .navbar .title h1 {
+        font-size: 20px; /* Başlık boyutunu küçült */
+        margin-left: 10px; /* Başlığı sola yaklaştır */
+    }
+
+    .navbar .button-container {
+        flex-wrap: wrap; /* Butonları satır içinde sar */
+        justify-content: center; /* Butonları ortala */
+        margin-left: 0; /* Butonları sola yapıştır */
+        margin-right: 0; /* Sağdaki boşluğu kaldır */
+        gap: 2px; /* Butonlar arasındaki boşluğu azalt */
+    }
+
+    .navbar .button {
+        padding: 5px 10px;
+        font-size: 14px;
+        width: auto; /* Buton genişliğini otomatik ayarla */
+        margin-top: 0; /* Butonları yukarıdan kaydır */
+    }
+
+    .content-container {
+        flex-direction: column; /* Yataydan dikeye geç */
+        padding: 20px; /* Kenar boşluklarını azalt */
+    }
+
+    .content h1 {
+        font-size: 24px; /* Başlık boyutunu küçült */
+    }
+
+    .content h2 {
+        font-size: 20px; /* Başlık boyutunu küçült */
+    }
+
+    .content h3 {
+        font-size: 18px; /* Başlık boyutunu küçült */
+    }
+
+    #roadmap h2 {
+        font-size: 28px; /* Yol haritası başlık boyutunu küçült */
+    }
+
+    .snake-step {
+        width: 100px; /* Adım genişliğini küçült */
+        height: 100px; /* Adım yüksekliğini küçült */
+    }
+
+    .snake-step h3 {
+        font-size: 12px; /* Adım başlık boyutunu küçült */
+    }
+
+    .snake-step p {
+        font-size: 10px; /* Adım açıklama boyutunu küçült */
+    }
+
+    .content-box {
+        padding: 10px; /* İçerik kutusu dolgusunu azalt */
+        margin-top: 10px; /* Üst boşluğu azalt */
+    }
+
+    .memes-container {
+        padding: 5px; /* Kutunun iç dolgusu */
+    }
+
+    .meme-image {
+        width: 100px; /* Resmin genişliğini küçült */
+        height: 100px; /* Resmin yüksekliğini küçült */
+    }
+
+    .socials-container {
+        flex-direction: column; /* İkonları dikeyde sırala */
+        align-items: center; /* Dikeyde ortala */
+    }
+
+    .iframe-container {
+        width: 100%; /* Mobilde genişlik %100 */
+        overflow: hidden; /* Yanlardan taşmasını engeller */
+        padding: 0 5px; /* Kenar boşluklarını azalt */
+    }
+
+    iframe {
+        width: 400px; /* Iframe'i tam genişlikte kullan */
+        height: 300px; /* Yükseklik otomatik */
+    }
+
+    .home-logo-container {
+        flex-direction: column; /* Logo ve yazıları dikeyde sırala */
+        align-items: center; /* Ortala */
+        text-align: center; /* Yazıları ortala */
+    }
+
+    .frame-container {
+        flex-direction: column; /* Pashkets Frame'i dikeyde sırala */
+        align-items: center; /* Ortala */
+        gap: 10px; /* Aralığı ayarla */
+    }
+
+    .content-container .content {
+        align-items: center; /* İçeriği ortala */
+        text-align: center; /* Yazıları ortala */
     }
 }
 
