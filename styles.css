@@ -47,7 +47,8 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--primary-color); /* Metinlerde daha açık bir gri */
-  font-family: 'Funnel Display', sans-serif;    background: var(--background-gradient);
+  font-family: 'Funnel Display', sans-serif;    
+background: var(--background-gradient);
     animation: gradientAnimation 15s ease infinite; /* Arka planda hareketli renk değişimi */
     background-size: 400% 400%;
 }
@@ -722,6 +723,24 @@ color: white;
         align-items: center; /* İçeriği ortala */
         text-align: center; /* Yazıları ortala */
     }
+}
+
+.token-address {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 60px; /* Yazı boyutunu artırdık */
+    font-weight: bold;
+    color: #ffffff; /* Beyaz renk */
+    background-color: #000000; /* Siyah arka plan */
+    padding: 15px; /* Daha geniş padding */
+    border-radius: 8px; /* Kenarları daha yuvarlak */
+    font-family: 'Funnel Display', sans-serif; /* Belirttiğiniz font */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Daha belirgin gölge */
+ margin-bottom: 20px; /* Alt tarafa 20px boşluk ekler */
+}
+
+.token-address strong {
+    color: #4caf50; /* Token adresi vurgusu için yeşil renk */
 }
 
 
