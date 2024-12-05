@@ -723,6 +723,18 @@ color: white;
         align-items: center; /* İçeriği ortala */
         text-align: center; /* Yazıları ortala */
     }
+
+    .token-address {
+        font-size: 16px; /* Further reduce font size for smaller screens */
+        padding: 10px; /* Compact padding */
+        margin-top: 10px; /* Adjust top margin */
+        margin-bottom: 15px; /* Adjust bottom margin */
+        line-height: 1.4; /* Add spacing between lines for readability */
+        width: calc(100% - 20px); /* Adjust width with padding */
+        max-width: 100%; /* Ensure it fits within the screen */
+        white-space: normal; /* Force text to wrap if it's in a single line */
+        overflow: hidden; /* Prevent overflow */
+    }
 }
 
 .token-address {
