@@ -725,16 +725,16 @@ color: white;
     }
 
     .token-address {
-        font-size: 12px; /* Smaller font size */
-        padding: 8px; /* Compact padding */
-        margin: 10px; /* Consistent margin */
-        line-height: 1.3; /* Adjust line spacing for readability */
-        width: 80%; /* Make sure it uses the full screen width */
-        max-width: 100%; /* No width limit */
-        word-break: break-word; /* Allow long text to wrap */
-        overflow-wrap: break-word; /* Ensure words break */
+        font-size: 14px; /* Further reduce the font size for mobile */
+        padding: 10px; /* Reduce padding to make it fit */
+        margin-top: 8px; /* Adjust top margin */
+        margin-bottom: 12px; /* Adjust bottom margin */
+        line-height: 1.3; /* Improve line height for readability */
+        width: 100%; /* Ensure it takes full width */
+        max-width: 100%; /* Ensure it doesn't overflow */
+        word-wrap: break-word; /* Break long words */
         text-align: center; /* Center text */
-        box-sizing: border-box; /* Ensure padding is included in width calculation */
+        box-sizing: border-box; /* Ensure padding doesn't affect width */
     }
 }
 
