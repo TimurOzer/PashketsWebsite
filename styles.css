@@ -725,24 +725,17 @@ color: white;
     }
 
     .token-address {
-        font-size: 14px; /* Further reduce the font size for mobile */
-        padding: 10px; /* Reduce padding to make it fit */
-        margin-top: 8px; /* Adjust top margin */
-        margin-bottom: 12px; /* Adjust bottom margin */
-        line-height: 1.3; /* Improve line height for readability */
-        width: 100%; /* Ensure it takes full width */
-        max-width: 100%; /* Ensure it doesn't overflow */
-        word-wrap: break-word; /* Break long words */
-        text-align: center; /* Center text */
-        box-sizing: border-box; /* Ensure padding doesn't affect width */
+        width: 100%; /* Mobilde genişlik %100 */
+        overflow: hidden; /* Yanlardan taşmasını engeller */
+        padding: 0 5px; /* Kenar boşluklarını azalt */
+        font-size: 20px; /* Adım açıklama boyutunu küçült */
     }
 }
 
 .token-address {
     margin-top: 20px;
-    text-align: center;
-    font-size: 60px; /* Yazı boyutunu artırdık */
     font-weight: bold;
+    font-size: 60px; /* Adım açıklama boyutunu küçült */
     color: #ffffff; /* Beyaz renk */
     background-color: #000000; /* Siyah arka plan */
     padding: 15px; /* Daha geniş padding */
@@ -750,6 +743,10 @@ color: white;
     font-family: 'Funnel Display', sans-serif; /* Belirttiğiniz font */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Daha belirgin gölge */
  margin-bottom: 20px; /* Alt tarafa 20px boşluk ekler */
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .token-address strong {
