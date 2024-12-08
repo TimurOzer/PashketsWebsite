@@ -624,7 +624,7 @@ color: white;
 .token-address {
     margin-top: 20px;
     font-weight: bold;
-    font-size: 60px; /* Adım açıklama boyutunu küçült */
+    font-size: 35px; /* Adım açıklama boyutunu küçült */
     color: #ffffff; /* Beyaz renk */
     background-color: #000000; /* Siyah arka plan */
     padding: 15px; /* Daha geniş padding */
@@ -749,7 +749,7 @@ color: white;
         width: 100%; /* Mobilde genişlik %100 */
         overflow: hidden; /* Yanlardan taşmasını engeller */
         padding: 0 5px; /* Kenar boşluklarını azalt */
-        font-size: 20px; /* Adım açıklama boyutunu küçült */
+        font-size: 12px; /* Adım açıklama boyutunu küçült */
     }
 }
 
